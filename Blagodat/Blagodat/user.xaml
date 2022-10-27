@@ -9,6 +9,6 @@
       Title="user">
 
     <Grid>
-        <TextBlock Text="User" Margin="1,1,-1,-1"></TextBlock>
+        <TextBlock FontSize="18" Text="Старший смены" Margin="1,1,-1,-1"></TextBlock>
     </Grid>
 </Page>

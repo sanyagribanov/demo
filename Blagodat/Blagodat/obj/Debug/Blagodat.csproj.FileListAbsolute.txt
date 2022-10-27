@@ -37,3 +37,35 @@ C:\Users\Администратор\Desktop\NE TROGAT\blagodat\Blagodat\Blagodat
 C:\Users\Администратор\Desktop\NE TROGAT\blagodat\Blagodat\Blagodat\obj\Debug\Blagodat.csproj.CoreCompileInputs.cache
 C:\Users\Администратор\Desktop\NE TROGAT\blagodat\Blagodat\Blagodat\obj\Debug\Blagodat.exe
 C:\Users\Администратор\Desktop\NE TROGAT\blagodat\Blagodat\Blagodat\obj\Debug\Blagodat.pdb
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\bin\Debug\Blagodat.exe.config
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\bin\Debug\Blagodat.exe
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\bin\Debug\Blagodat.pdb
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\Blagodat.csproj.AssemblyReference.cache
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\Blagodat.csproj.SuggestedBindingRedirects.cache
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\admin.g.cs
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\MainWindow.g.cs
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\user.g.cs
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\App.g.cs
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\Blagodat_MarkupCompile.cache
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\Blagodat_MarkupCompile.lref
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\App.baml
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\admin.baml
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\MainWindow.baml
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\user.baml
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\Blagodat.g.resources
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\Blagodat.Properties.Resources.resources
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\Blagodat.csproj.GenerateResource.cache
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\Blagodat.csproj.CoreCompileInputs.cache
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\Blagodat.exe
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\Blagodat.pdb
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\bin\Debug\EntityFramework.dll
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\bin\Debug\EntityFramework.xml
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\authorisation.g.cs
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\Blagodat_Content.g.cs
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\authorisation.baml
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\Blagodat.csproj.CopyComplete
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\manager.g.cs
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\manager.baml

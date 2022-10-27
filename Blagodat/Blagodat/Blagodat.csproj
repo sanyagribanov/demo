@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,10 +64,57 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="authorisation.xaml.cs">
+      <DependentUpon>authorisation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DataBaseConnect.cs" />
+    <Compile Include="manager.xaml.cs">
+      <DependentUpon>manager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\agents.cs">
+      <DependentUpon>dbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbConnect.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbConnect.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbConnect.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbConnect.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbConnect.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\productsale.cs">
+      <DependentUpon>dbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\product_agent.cs">
+      <DependentUpon>dbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\product_agents.cs">
+      <DependentUpon>dbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Role.cs">
+      <DependentUpon>dbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>dbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>dbConnect.tt</DependentUpon>
+    </Compile>
     <Compile Include="user.xaml.cs">
       <DependentUpon>user.xaml</DependentUpon>
     </Compile>
     <Page Include="admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="authorisation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -77,6 +133,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="manager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="user.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -100,6 +160,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Models\dbConnect.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dbConnect.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\dbConnect.edmx.diagram">
+      <DependentUpon>dbConnect.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -115,7 +183,20 @@
     <Resource Include="logo_1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Content Include="Models\dbConnect.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>dbConnect.Context.cs</LastGenOutput>
+      <DependentUpon>dbConnect.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\dbConnect.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbConnect.edmx</DependentUpon>
+      <LastGenOutput>dbConnect.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

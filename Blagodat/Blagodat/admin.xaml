@@ -9,6 +9,6 @@
       Title="admin">
 
     <Grid>
-        <TextBlock Text="Admin" Margin="1,1,-1,-1"></TextBlock>
+        <TextBlock FontSize="18" Text="Администратор" Margin="1,1,-1,-1"></TextBlock>
     </Grid>
 </Page>

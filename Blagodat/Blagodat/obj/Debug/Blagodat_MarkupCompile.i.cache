@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Администратор\Desktop\blagodat\Blagodat\Blagodat\obj\Debug\
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\obj\Debug\
 Blagodat
 none
 false
 DEBUG;TRACE
-C:\Users\Администратор\Desktop\blagodat\Blagodat\Blagodat\App.xaml
-3-1018998180
-
-8-1434121919
-13-1505183044
-admin.xaml;MainWindow.xaml;user.xaml;
+C:\Users\agribanov\Desktop\demo\Blagodat\Blagodat\App.xaml
+5-1575777376
+2-382894531
+21-68518120
+18644382123
+admin.xaml;authorisation.xaml;MainWindow.xaml;manager.xaml;user.xaml;
 
 True
 

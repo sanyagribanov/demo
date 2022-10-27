@@ -22,11 +22,13 @@ namespace Blagodat
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new user());
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new admin());
+            MainFrame.Navigate(new authorisation());
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -37,6 +39,11 @@ namespace Blagodat
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {
 
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new manager());
         }
     }
 }
