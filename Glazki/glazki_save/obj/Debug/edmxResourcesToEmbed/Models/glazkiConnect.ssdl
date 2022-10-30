@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище gornolyzhnyi_kompleksModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="clients">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIO" Type="varchar(max)" />
+    <Property Name="Code_Clienta" Type="int" />
+    <Property Name="Passport_Data" Type="varchar(max)" />
+    <Property Name="Birthday" Type="date" />
+    <Property Name="Adress" Type="varchar(max)" />
+    <Property Name="e-mail" Type="varchar(max)" />
+    <Property Name="Password" Type="varchar(max)" />
+    <Property Name="id_zakaza" Type="int" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="RoleID" Type="int" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "gornolyzhnyi_kompleks.dbo.uslugi" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="uslugi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar(max)" />
+    <Property Name="code" Type="nvarchar(max)" />
+    <Property Name="price" Type="int" />
+    <Property Name="id_zakazy" Type="int" />
+  </EntityType>
+  <EntityType Name="zakazy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="code" Type="varchar(max)" />
+    <Property Name="date_creation" Type="date" />
+    <Property Name="time" Type="time" Precision="7" />
+    <Property Name="code_client" Type="int" />
+    <Property Name="uslugi" Type="nvarchar(max)" />
+    <Property Name="status" Type="varchar(max)" />
+    <Property Name="date_of_closing" Type="date" />
+    <Property Name="time_prokat" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_clients_zakazy">
+    <End Role="zakazy" Type="Self.zakazy" Multiplicity="0..1" />
+    <End Role="clients" Type="Self.clients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zakazy">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="clients">
+        <PropertyRef Name="id_zakaza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_role">
+    <End Role="role" Type="Self.role" Multiplicity="0..1" />
+    <End Role="user" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_uslugi_zakazy">
+    <End Role="zakazy" Type="Self.zakazy" Multiplicity="0..1" />
+    <End Role="uslugi" Type="Self.uslugi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zakazy">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uslugi">
+        <PropertyRef Name="id_zakazy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище gornolyzhnyi_kompleksModelContainer">
+    <EntitySet Name="clients" EntityType="Self.clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="zakazy" EntityType="Self.zakazy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uslugi" EntityType="Self.uslugi" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [uslugi].[ID] AS [ID], 
+    [uslugi].[title] AS [title], 
+    [uslugi].[code] AS [code], 
+    [uslugi].[price] AS [price], 
+    [uslugi].[id_zakazy] AS [id_zakazy]
+    FROM [dbo].[uslugi] AS [uslugi]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_clients_zakazy" Association="Self.FK_clients_zakazy">
+      <End Role="zakazy" EntitySet="zakazy" />
+      <End Role="clients" EntitySet="clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_role" Association="Self.FK_user_role">
+      <End Role="role" EntitySet="role" />
+      <End Role="user" EntitySet="user" />
+    </AssociationSet>
+    <AssociationSet Name="FK_uslugi_zakazy" Association="Self.FK_uslugi_zakazy">
+      <End Role="zakazy" EntitySet="zakazy" />
+      <End Role="uslugi" EntitySet="uslugi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

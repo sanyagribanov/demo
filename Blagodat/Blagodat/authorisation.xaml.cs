@@ -42,7 +42,7 @@ namespace Blagodat
 
                 if (userObj != null)
                 {
-                    MessageBox.Show("Здравствуйте " + userObj.Role.Title + ", " + userObj.Login, "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Здравствуйте " + userObj.Role.Title + "," + userObj.Login, "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                     switch (userObj.ID)
                     {
                         case 1:

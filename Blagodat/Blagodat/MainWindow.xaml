@@ -11,18 +11,18 @@
             <RowDefinition Height="150"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Source="logo_1.ico"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Source="logo.png"/>
         <StackPanel  HorizontalAlignment="Right" VerticalAlignment="Top">
             <Button Content="Администратор" Margin="0"  Width="120" Height="30" RenderTransformOrigin="0.621,0.604"   FontSize="14" Foreground="White" Click="Button_Click"/>
             <Button Content="Менеджер"  Margin="0"  Width="120" Height="30" RenderTransformOrigin="0.621,0.604"   FontSize="14" Foreground="White" Click="Button_Click_2"/>
             <Button Content="Ст. смены"  Margin="0"  Width="120" Height="30" RenderTransformOrigin="0.621,0.604"   FontSize="14" Foreground="White" Click="Button_Click_1"/>
         </StackPanel>
 
-        <Label Content="ГК Благодать" HorizontalAlignment="Left" Margin="215,32,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="25" FontStyle="Oblique" RenderTransformOrigin="0.059,0.151" Height="35" Width="319"/>
+        <Label Content="ГлазкиSave" HorizontalAlignment="Left" Margin="215,30,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="25" FontStyle="Oblique" RenderTransformOrigin="0.059,0.151" Height="35" Width="319"/>
         <Frame Grid.Row="1" x:Name="MainFrame" Navigated="MainFrame_Navigated" NavigationUIVisibility="Hidden"/>
 
         <Grid>
-            <DataGrid Margin="0,97,0,0" Background="#76e383"/>
+            <DataGrid Margin="0,97,0,0" Background="#FFE9F9"/>
         </Grid>
     </Grid>
 </Window>

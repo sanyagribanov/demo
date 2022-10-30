@@ -24,5 +24,25 @@ namespace glazki_save
         {
             InitializeComponent();
         }
+
+        private void Admin_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new auth());
+        }
+
+        private void Manager_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new manager());
+        }
+
+        private void Smena_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new smena());
+        }
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }
