@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="75724fbab38b4b91a8a1e309c3daeb52" Name="Diagram1">
+      <Diagram DiagramId="8d3efde7c2c14f79aeb6d1aca7be5931" Name="Diagram1">
         <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.clients" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.role" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.role" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.user" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.zakazy" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />

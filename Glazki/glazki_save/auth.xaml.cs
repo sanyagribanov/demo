@@ -33,7 +33,7 @@ namespace glazki_save
                 //обращение к таблице Юзер для получения Логин и Пассворд
                 //var - общий тп переменной
                 //userObj - имя объекта. задается самостоятельно. Информация об агенте - agentObj 
-                var userObj = Classes.DBConnect.modeldb.user.FirstOrDefault(x => x.Login == login.Text && x.Password == passwd.Password);
+                var userObj = Classes.DBConnect.modeldb.user.FirstOrDefault(x => x.Name == login.Text && x.Password == passwd.Password);
 
                 /* if (login.Text == "1" && passwd.Password == "1")
                  {
@@ -42,7 +42,7 @@ namespace glazki_save
 
                 if (userObj != null)
                 {
-                    MessageBox.Show("Здравствуйте " + userObj.role.Title + ", " + userObj.Login, "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Здравствуйте " + userObj.role.Title + ", " + userObj.Name, "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                     switch (userObj.ID)
                     {
                         case 1:

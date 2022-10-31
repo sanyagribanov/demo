@@ -68,6 +68,39 @@
       <DependentUpon>auth.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\DBConnect.cs" />
+    <Compile Include="Models\blagodat.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>blagodat.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\blagodat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>blagodat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\blagodat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>blagodat.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\clients.cs">
+      <DependentUpon>blagodat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\role.cs">
+      <DependentUpon>blagodat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>blagodat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\user.cs">
+      <DependentUpon>blagodat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uslugi.cs">
+      <DependentUpon>blagodat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\zakazy.cs">
+      <DependentUpon>blagodat.tt</DependentUpon>
+    </Compile>
     <Compile Include="smena.xaml.cs">
       <DependentUpon>smena.xaml</DependentUpon>
     </Compile>
@@ -107,39 +140,6 @@
     <Compile Include="manager.xaml.cs">
       <DependentUpon>manager.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\clients.cs">
-      <DependentUpon>glazkiConnect.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\glazkiConnect.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>glazkiConnect.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\glazkiConnect.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>glazkiConnect.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\glazkiConnect.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>glazkiConnect.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\role.cs">
-      <DependentUpon>glazkiConnect.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>glazkiConnect.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\user.cs">
-      <DependentUpon>glazkiConnect.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\uslugi.cs">
-      <DependentUpon>glazkiConnect.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\zakazy.cs">
-      <DependentUpon>glazkiConnect.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -157,12 +157,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Models\glazkiConnect.edmx">
+    <EntityDeploy Include="Models\blagodat.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>glazkiConnect.Designer.cs</LastGenOutput>
+      <LastGenOutput>blagodat.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\glazkiConnect.edmx.diagram">
-      <DependentUpon>glazkiConnect.edmx</DependentUpon>
+    <None Include="Models\blagodat.edmx.diagram">
+      <DependentUpon>blagodat.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -173,27 +173,25 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Глазки-save.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Глазки-save.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Models\glazkiConnect.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>glazkiConnect.Context.cs</LastGenOutput>
-      <DependentUpon>glazkiConnect.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\glazkiConnect.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>glazkiConnect.edmx</DependentUpon>
-      <LastGenOutput>glazkiConnect.cs</LastGenOutput>
-    </Content>
+    <Resource Include="logo.ico" />
+    <Resource Include="logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Models\blagodat.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>blagodat.edmx</DependentUpon>
+      <LastGenOutput>blagodat.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\blagodat.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>blagodat.edmx</DependentUpon>
+      <LastGenOutput>blagodat.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,6 +17,7 @@ namespace glazki_save.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public Nullable<int> RoleID { get; set; }
+        public string Password { get; set; }
     
         public virtual role role { get; set; }
     }

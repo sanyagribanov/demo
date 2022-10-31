@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/glazkiconnect.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/glazkiconnect.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/blagodat.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/blagodat.tt")]
 
 
