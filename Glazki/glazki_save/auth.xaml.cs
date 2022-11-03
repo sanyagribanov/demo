@@ -24,6 +24,7 @@ namespace glazki_save
         public auth()
         {
             InitializeComponent();
+            Classes.DBConnect.modeldb = new Models.gornolyzhnyi_kompleksEntities1();
         }
 
         private void Login(object sender, RoutedEventArgs e)
@@ -42,7 +43,7 @@ namespace glazki_save
 
                 if (userObj != null)
                 {
-                    MessageBox.Show("Здравствуйте " + userObj.role.Title + ", " + userObj.Name, "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Здравствуйте " + userObj.role.Title + ", " + userObj.FIO, "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                     switch (userObj.ID)
                     {
                         case 1:
@@ -63,8 +64,22 @@ namespace glazki_save
             }
             catch
             {
-
+                MessageBox.Show("Ошибка: " + ex.Message.ToString(), "Критическая работа приложения",
+        MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+        }
+
+        private void ShowPass_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            ShowPass.Visibility = Visibility.Collapsed;
+            passwd.Visibility = Visibility.Visible;
+        }
+
+        private void ShowPass_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ShowPass.Visibility = Visibility.Visible;
+            passwd.Visibility = Visibility.Collapsed;
+            ShowPass.Text = passwd.Password;
         }
     }
 }

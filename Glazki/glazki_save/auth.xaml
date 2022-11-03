@@ -13,7 +13,8 @@
             <TextBlock>Логин</TextBlock>
             <TextBox Name="login"/>
             <TextBlock>Пароль</TextBlock>
-            <PasswordBox Name="passwd"/>
+            <PasswordBox Name="passwd" Visibility="Collapsed"/>
+            <TextBlock Text="Show Password" x:Name="ShowPass" MouseDown="ShowPass_MouseDown" MouseUp="ShowPass_MouseUp"></TextBlock>
             <Button Click="Login" Content="Войти"/>
         </StackPanel>
     </Grid>

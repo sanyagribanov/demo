@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8d3efde7c2c14f79aeb6d1aca7be5931" Name="Diagram1">
+      <Diagram DiagramId="60250d23b8ec46b1b36022ded7995eaf" Name="Diagram1">
         <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.clients" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.role" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.role" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.user" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.zakazy" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="gornolyzhnyi_kompleksModel.uslugi" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />

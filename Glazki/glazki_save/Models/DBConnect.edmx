@@ -44,6 +44,7 @@
           <Property Name="Name" Type="nvarchar(max)" />
           <Property Name="RoleID" Type="int" />
           <Property Name="Password" Type="nvarchar(max)" />
+          <Property Name="FIO" Type="nvarchar(max)" />
         </EntityType>
         <!--Ошибки, обнаруженные при создании:
 предупреждение 6002: В таблице или представлении "gornolyzhnyi_kompleks.dbo.uslugi" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
@@ -181,6 +182,7 @@
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="RoleID" Type="Int32" />
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="role" Relationship="Self.FK_user_role" FromRole="user" ToRole="role" />
         </EntityType>
         <EntityType Name="zakazy">
@@ -246,7 +248,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="gornolyzhnyi_kompleksEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="gornolyzhnyi_kompleksEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="clients" EntityType="Self.clients" />
           <EntitySet Name="role" EntityType="Self.role" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -271,7 +273,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище gornolyzhnyi_kompleksModelContainer" CdmEntityContainer="gornolyzhnyi_kompleksEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище gornolyzhnyi_kompleksModelContainer" CdmEntityContainer="gornolyzhnyi_kompleksEntities1">
           <EntitySetMapping Name="clients">
             <EntityTypeMapping TypeName="gornolyzhnyi_kompleksModel.clients">
               <MappingFragment StoreEntitySet="clients">
@@ -313,6 +315,7 @@
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="RoleID" ColumnName="RoleID" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FIO" ColumnName="FIO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace glazki_save.Classes
+namespace glazki_save
 {
-    internal class DBConnect
+    internal class TimeDemo
     {
-        public static Models.gornolyzhnyi_kompleksEntities1 modeldb;
+
     }
 }

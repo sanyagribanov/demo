@@ -68,42 +68,43 @@
       <DependentUpon>auth.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\DBConnect.cs" />
-    <Compile Include="Models\blagodat.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>blagodat.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\blagodat.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>blagodat.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\blagodat.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>blagodat.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\clients.cs">
-      <DependentUpon>blagodat.tt</DependentUpon>
+      <DependentUpon>DBConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBConnect.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBConnect.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBConnect.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBConnect.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBConnect.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\role.cs">
-      <DependentUpon>blagodat.tt</DependentUpon>
+      <DependentUpon>DBConnect.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>blagodat.tt</DependentUpon>
+      <DependentUpon>DBConnect.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\user.cs">
-      <DependentUpon>blagodat.tt</DependentUpon>
+      <DependentUpon>DBConnect.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\uslugi.cs">
-      <DependentUpon>blagodat.tt</DependentUpon>
+      <DependentUpon>DBConnect.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\zakazy.cs">
-      <DependentUpon>blagodat.tt</DependentUpon>
+      <DependentUpon>DBConnect.tt</DependentUpon>
     </Compile>
     <Compile Include="smena.xaml.cs">
       <DependentUpon>smena.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TimeDemo.cs" />
     <Page Include="admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -157,12 +158,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Models\blagodat.edmx">
+    <EntityDeploy Include="Models\DBConnect.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>blagodat.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBConnect.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\blagodat.edmx.diagram">
-      <DependentUpon>blagodat.edmx</DependentUpon>
+    <None Include="Models\DBConnect.edmx.diagram">
+      <DependentUpon>DBConnect.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -180,17 +181,16 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Models\blagodat.Context.tt">
+    <Content Include="Models\DBConnect.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>blagodat.edmx</DependentUpon>
-      <LastGenOutput>blagodat.Context.cs</LastGenOutput>
+      <DependentUpon>DBConnect.edmx</DependentUpon>
+      <LastGenOutput>DBConnect.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\blagodat.tt">
+    <Content Include="Models\DBConnect.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>blagodat.edmx</DependentUpon>
-      <LastGenOutput>blagodat.cs</LastGenOutput>
+      <DependentUpon>DBConnect.edmx</DependentUpon>
+      <LastGenOutput>DBConnect.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

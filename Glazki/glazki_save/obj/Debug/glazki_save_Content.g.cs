@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/blagodat.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/blagodat.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/dbconnect.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/dbconnect.tt")]
 
 

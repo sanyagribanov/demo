@@ -23,6 +23,7 @@ namespace glazki_save
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new admin());
         }
 
         private void Admin_Click(object sender, RoutedEventArgs e)
