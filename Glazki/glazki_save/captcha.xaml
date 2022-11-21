@@ -13,6 +13,10 @@
             <StackPanel Orientation="Horizontal" Name="SPanelSymbols" HorizontalAlignment="Center" VerticalAlignment="Center"></StackPanel>
             <Canvas Name="CanvasNoise"></Canvas>
         </Grid>
-        <Button x:Name="BtnUpdateCaptcha" Click="BtnUpdateCaptcha_Click" VerticalAlignment="Bottom">Обновить капчу</Button>
+        <StackPanel VerticalAlignment="Bottom">
+            <TextBox x:Name="CaptchaText"></TextBox>
+            <Button x:Name="BtnUpdateCaptcha1" Click="BtnUpdateCaptcha1_Click" VerticalAlignment="Bottom">Обновить капчу</Button>
+            <Button x:Name="BtnUpdateCaptcha" Click="BtnUpdateCaptcha_Click" VerticalAlignment="Bottom">Ввести капчу</Button>
+        </StackPanel>
     </Grid>
 </Page>

@@ -43,12 +43,15 @@ namespace glazki_save
 
                 if (userObj != null)
                 {
-                    MessageBox.Show("Здравствуйте " + userObj.role.Title + ", " + userObj.FIO, "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Здравствуйте " + userObj.role.Title + ", " + userObj.FIO + "\n" + "Пройдите капчу", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                     switch (userObj.ID)
                     {
                         case 1:
-                            NavigationService.Navigate(new admin());
+                            NavigationService.Navigate(new captcha());
                             break;
+/*                        case 2:
+                            NavigationService.Navigate(new admin());
+                            break;*/
                         case 2:
                             NavigationService.Navigate(new user());
                             break;

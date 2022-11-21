@@ -9,6 +9,6 @@
       Title="admin">
 
     <Grid>
-        <TextBlock FontSize="18">Администратор</TextBlock>
+        <DataGrid x:Name="datagrid_1"/>
     </Grid>
 </Page>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using glazki_save.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -75,9 +76,37 @@ namespace glazki_save
                 Canvas.SetTop(ellipse, _random.Next(0, 150));
             }
         }
-        private void BtnUpdateCaptcha_Click(object sender, RoutedEventArgs e)
+
+        private void BtnUpdateCaptcha1_Click(object sender, RoutedEventArgs e)
         {
             UpdateCaptcha();
+        }
+
+        private void BtnUpdateCaptcha_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //обращение к таблице Юзер для получения Логин и Пассворд
+                //var - общий тп переменной
+                //userObj - имя объекта. задается самостоятельно. Информация об агенте - agentObj 
+                var userObj = CaptchaText.Text;
+
+                /* if (login.Text == "1" && passwd.Password == "1")
+                 {
+                     NavigationService.Navigate(new admin());
+                 }*/
+
+                if (userObj != null)
+                {
+                    MessageBox.Show("Вы прошли проверку", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                    
+                    NavigationService.Navigate(new admin());
+                }
+                else MessageBox.Show("Вы прошли проверку", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            catch
+            {
+            }
         }
     }
 }
