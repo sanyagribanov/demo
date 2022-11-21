@@ -23,12 +23,14 @@ namespace glazki_save
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new admin());
+            MainFrame.Navigate(new auth());
+
         }
 
         private void Admin_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new auth());
+           /* MainFrame.Navigate(new captcha());*/
+            MainFrame.Navigate(new admin());
         }
 
         private void Manager_Click(object sender, RoutedEventArgs e)

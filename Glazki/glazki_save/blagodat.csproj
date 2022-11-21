@@ -67,6 +67,9 @@
     <Compile Include="auth.xaml.cs">
       <DependentUpon>auth.xaml</DependentUpon>
     </Compile>
+    <Compile Include="captcha.xaml.cs">
+      <DependentUpon>captcha.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Classes\DBConnect.cs" />
     <Compile Include="Models\clients.cs">
       <DependentUpon>DBConnect.tt</DependentUpon>
@@ -110,6 +113,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="auth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="captcha.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

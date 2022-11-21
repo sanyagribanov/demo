@@ -13,10 +13,10 @@ namespace glazki_save.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class gornolyzhnyi_kompleksEntities1 : DbContext
+    public partial class gornolyzhnyi_kompleksEntities2 : DbContext
     {
-        public gornolyzhnyi_kompleksEntities1()
-            : base("name=gornolyzhnyi_kompleksEntities1")
+        public gornolyzhnyi_kompleksEntities2()
+            : base("name=gornolyzhnyi_kompleksEntities2")
         {
         }
     

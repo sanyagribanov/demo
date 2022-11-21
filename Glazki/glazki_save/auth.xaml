@@ -13,8 +13,9 @@
             <TextBlock>Логин</TextBlock>
             <TextBox Name="login"/>
             <TextBlock>Пароль</TextBlock>
-            <PasswordBox Name="passwd" Visibility="Collapsed"/>
-            <TextBlock Text="Show Password" x:Name="ShowPass" MouseDown="ShowPass_MouseDown" MouseUp="ShowPass_MouseUp"></TextBlock>
+            <TextBox Name="TxbPassword" Width="370" Visibility="Collapsed"></TextBox>
+            <PasswordBox Name="passwd"/>
+            <TextBlock Text="Show Password" x:Name="TbxShowPass" MouseDown="ShowPass_MouseDown" MouseUp="ShowPass_MouseUp"></TextBlock>
             <Button Click="Login" Content="Войти"/>
         </StackPanel>
     </Grid>

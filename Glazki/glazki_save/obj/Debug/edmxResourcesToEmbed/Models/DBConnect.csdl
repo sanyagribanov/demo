@@ -107,7 +107,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="gornolyzhnyi_kompleksEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="gornolyzhnyi_kompleksEntities2" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="clients" EntityType="Self.clients" />
     <EntitySet Name="role" EntityType="Self.role" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />

@@ -24,7 +24,7 @@ namespace glazki_save
         public auth()
         {
             InitializeComponent();
-            Classes.DBConnect.modeldb = new Models.gornolyzhnyi_kompleksEntities1();
+            Classes.DBConnect.modeldb = new Models.gornolyzhnyi_kompleksEntities2();
         }
 
         private void Login(object sender, RoutedEventArgs e)
@@ -64,22 +64,20 @@ namespace glazki_save
             }
             catch
             {
-                MessageBox.Show("Ошибка: " + ex.Message.ToString(), "Критическая работа приложения",
-        MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
         private void ShowPass_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            ShowPass.Visibility = Visibility.Collapsed;
+            TbxShowPass.Visibility = Visibility.Collapsed;
             passwd.Visibility = Visibility.Visible;
         }
 
         private void ShowPass_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ShowPass.Visibility = Visibility.Visible;
+            TbxShowPass.Visibility = Visibility.Visible;
             passwd.Visibility = Visibility.Collapsed;
-            ShowPass.Text = passwd.Password;
+            TbxShowPass.Text = passwd.Password;
         }
     }
 }
