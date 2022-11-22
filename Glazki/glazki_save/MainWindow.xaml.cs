@@ -29,7 +29,6 @@ namespace glazki_save
 
         private void Admin_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new captcha());
             MainFrame.Navigate(new admin());
         }
 

@@ -16,7 +16,16 @@
             <TextBox Name="TxbPassword" Width="370" Visibility="Collapsed"></TextBox>
             <PasswordBox Name="passwd"/>
             <TextBlock Text="Show Password" x:Name="TbxShowPass" MouseDown="ShowPass_MouseDown" MouseUp="ShowPass_MouseUp"></TextBlock>
-            <Button Click="Login" Content="Войти"/>
         </StackPanel>
+
+        <StackPanel x:Name="SPanelSymbols" Orientation="Horizontal" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Margin="0 200 0 0" Opacity="1">
+        </StackPanel>
+        <Border Height="100" BorderThickness="1" BorderBrush="Black" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 200 0 0">
+            <Canvas Name="CanvasNoise" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Opacity="0.5"/>
+        </Border>
+        <TextBox HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 100" Width="150" Name="CaptchatextBox"></TextBox>
+        <Button x:Name="BtnUpdateCaptcha1" Click="BtnUpdateCaptcha1_Click" VerticalAlignment="Center" Margin="0 350 0 0" Width="150">Обновить капчу</Button>
+
+        <Button Click="Login" Content="Войти" Width="150" Height="20" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>
