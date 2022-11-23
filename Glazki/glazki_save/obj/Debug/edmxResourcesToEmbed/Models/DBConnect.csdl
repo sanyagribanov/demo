@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="gornolyzhnyi_kompleksModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="bazaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="clients">
     <Key>
       <PropertyRef Name="id" />
@@ -8,20 +8,12 @@
     <Property Name="FIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Code_Clienta" Type="Int32" />
     <Property Name="Passport_Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
     <Property Name="Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="e_mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="id_zakaza" Type="Int32" />
     <NavigationProperty Name="zakazy" Relationship="Self.FK_clients_zakazy" FromRole="clients" ToRole="zakazy" />
-  </EntityType>
-  <EntityType Name="role">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" />
-    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="user" Relationship="Self.FK_user_role" FromRole="role" ToRole="user" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -35,30 +27,15 @@
   </EntityType>
   <EntityType Name="user">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="RoleID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="RoleID" Type="Int32" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="FIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="role" Relationship="Self.FK_user_role" FromRole="user" ToRole="role" />
-  </EntityType>
-  <EntityType Name="zakazy">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="date_creation" Type="DateTime" Precision="0" />
-    <Property Name="time" Type="Time" Precision="7" />
-    <Property Name="code_client" Type="Int32" />
-    <Property Name="uslugi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="date_of_closing" Type="DateTime" Precision="0" />
-    <Property Name="time_prokat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="clients" Relationship="Self.FK_clients_zakazy" FromRole="zakazy" ToRole="clients" />
-    <NavigationProperty Name="uslugi1" Relationship="Self.FK_uslugi_zakazy" FromRole="zakazy" ToRole="uslugi" />
+    <Property Name="Avatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="role" Relationship="Self.FK_role_user" FromRole="user" ToRole="role" />
   </EntityType>
   <EntityType Name="uslugi">
     <Key>
@@ -70,6 +47,30 @@
     <Property Name="price" Type="Int32" />
     <Property Name="id_zakazy" Type="Int32" />
     <NavigationProperty Name="zakazy" Relationship="Self.FK_uslugi_zakazy" FromRole="uslugi" ToRole="zakazy" />
+  </EntityType>
+  <EntityType Name="zakazy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date_creation" Type="DateTime" Precision="3" />
+    <Property Name="time" Type="Time" Precision="7" />
+    <Property Name="code_client" Type="Int32" />
+    <Property Name="uslugi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date_of_closing" Type="DateTime" Precision="3" />
+    <Property Name="time_prokat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="clients" Relationship="Self.FK_clients_zakazy" FromRole="zakazy" ToRole="clients" />
+    <NavigationProperty Name="uslugi1" Relationship="Self.FK_uslugi_zakazy" FromRole="zakazy" ToRole="uslugi" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="user" Relationship="Self.FK_role_user" FromRole="role" ToRole="user" />
   </EntityType>
   <Association Name="FK_clients_zakazy">
     <End Role="zakazy" Type="Self.zakazy" Multiplicity="0..1" />
@@ -83,14 +84,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_user_role">
+  <Association Name="FK_role_user">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
     <End Role="role" Type="Self.role" Multiplicity="0..1" />
-    <End Role="user" Type="Self.user" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="role">
-        <PropertyRef Name="ID" />
+      <Principal Role="user">
+        <PropertyRef Name="RoleID" />
       </Principal>
-      <Dependent Role="user">
+      <Dependent Role="role">
         <PropertyRef Name="RoleID" />
       </Dependent>
     </ReferentialConstraint>
@@ -107,20 +108,20 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="gornolyzhnyi_kompleksEntities2" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="bazaEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="clients" EntityType="Self.clients" />
-    <EntitySet Name="role" EntityType="Self.role" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="user" EntityType="Self.user" />
-    <EntitySet Name="zakazy" EntityType="Self.zakazy" />
     <EntitySet Name="uslugi" EntityType="Self.uslugi" />
+    <EntitySet Name="zakazy" EntityType="Self.zakazy" />
+    <EntitySet Name="role" EntityType="Self.role" />
     <AssociationSet Name="FK_clients_zakazy" Association="Self.FK_clients_zakazy">
       <End Role="zakazy" EntitySet="zakazy" />
       <End Role="clients" EntitySet="clients" />
     </AssociationSet>
-    <AssociationSet Name="FK_user_role" Association="Self.FK_user_role">
-      <End Role="role" EntitySet="role" />
+    <AssociationSet Name="FK_role_user" Association="Self.FK_role_user">
       <End Role="user" EntitySet="user" />
+      <End Role="role" EntitySet="role" />
     </AssociationSet>
     <AssociationSet Name="FK_uslugi_zakazy" Association="Self.FK_uslugi_zakazy">
       <End Role="zakazy" EntitySet="zakazy" />

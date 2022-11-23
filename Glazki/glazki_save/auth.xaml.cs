@@ -25,9 +25,14 @@ namespace glazki_save
         public auth()
         {
             InitializeComponent();
-            Classes.DBConnect.modeldb = new Models.gornolyzhnyi_kompleksEntities2();
+            UpdateCaptcha();
+            Classes.DBConnect.modeldb = new Models.bazaEntities1();
         }
         Random _random = new Random();
+        public string Symbols;
+
+        //authorisation
+
         private void Login(object sender, RoutedEventArgs e)
         {
             try
@@ -36,10 +41,11 @@ namespace glazki_save
                 //var - общий тп переменной
                 //userObj - имя объекта. задается самостоятельно. Информация об агенте - agentObj 
                 var userObj = Classes.DBConnect.modeldb.user.FirstOrDefault(x => x.Name == login.Text && x.Password == passwd.Password);
-                
 
-                if (userObj != null && (CaptchatextBox.Text == Symbols))
+                if (userObj != null && (CaptchatextBox.Text == Symbols.ToLower()))
                 {
+                    bazaEntities1.CurrentUser= userObj;
+
                     MessageBox.Show("Здравствуйте " + userObj.role.Title + ", " + userObj.FIO, "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                     switch (userObj.ID)
                     {
@@ -47,10 +53,10 @@ namespace glazki_save
                             NavigationService.Navigate(new admin());
                             break;
                         case 2:
-                            NavigationService.Navigate(new user());
+                            NavigationService.Navigate(new manager());
                             break;
                         case 3:
-                            NavigationService.Navigate(new manager());
+                            NavigationService.Navigate(new smena());
                             break;
                         default:
                             MessageBox.Show("Данные не обнаружены!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -78,6 +84,8 @@ namespace glazki_save
             TbxShowPass.Text = passwd.Password;
         }
 
+
+        //captcha
         private void UpdateCaptcha()
         {
             SPanelSymbols.Children.Clear();
@@ -85,7 +93,7 @@ namespace glazki_save
             GenerateSymbols(4);
             GenerateNoise(30);
         }
-        public string Symbols;
+        
         private void GenerateSymbols(int count)
         {
             string alphabet = "WERPASFHKXVBM234578";

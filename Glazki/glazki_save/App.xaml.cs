@@ -13,5 +13,6 @@ namespace glazki_save
     /// </summary>
     public partial class App : Application
     {
+        public static bool IsGone { get; internal set; }
     }
 }

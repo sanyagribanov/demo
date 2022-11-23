@@ -14,16 +14,9 @@ namespace glazki_save.Models
     
     public partial class role
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public role()
-        {
-            this.user = new HashSet<user>();
-        }
-    
-        public int ID { get; set; }
+        public int RoleID { get; set; }
         public string Title { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<user> user { get; set; }
+        public virtual user user { get; set; }
     }
 }

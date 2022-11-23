@@ -26,8 +26,7 @@ namespace glazki_save
             MainFrame.Navigate(new auth());
 
         }
-
-        private void Admin_Click(object sender, RoutedEventArgs e)
+        private void Admin_Click(Object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new admin());
         }
@@ -45,6 +44,11 @@ namespace glazki_save
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {
 
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+        MainFrame.GoBack();
         }
     }
 }

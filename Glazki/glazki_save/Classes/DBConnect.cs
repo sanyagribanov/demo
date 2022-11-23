@@ -8,6 +8,6 @@ namespace glazki_save.Classes
 {
     internal class DBConnect
     {
-        public static Models.gornolyzhnyi_kompleksEntities2 modeldb;
+        public static Models.bazaEntities1 modeldb;
     }
 }

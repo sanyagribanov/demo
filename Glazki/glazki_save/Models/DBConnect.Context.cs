@@ -13,23 +13,26 @@ namespace glazki_save.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class gornolyzhnyi_kompleksEntities2 : DbContext
+    public partial class bazaEntities1 : DbContext
     {
-        public gornolyzhnyi_kompleksEntities2()
-            : base("name=gornolyzhnyi_kompleksEntities2")
+        public bazaEntities1()
+            : base("name=bazaEntities1")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
         public virtual DbSet<clients> clients { get; set; }
-        public virtual DbSet<role> role { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<user> user { get; set; }
-        public virtual DbSet<zakazy> zakazy { get; set; }
         public virtual DbSet<uslugi> uslugi { get; set; }
+        public virtual DbSet<zakazy> zakazy { get; set; }
+        public virtual DbSet<role> role { get; set; }
+
+        public static user CurrentUser = null ;
+
     }
 }

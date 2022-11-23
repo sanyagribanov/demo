@@ -68,6 +68,9 @@
       <DependentUpon>auth.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\DBConnect.cs" />
+    <Compile Include="manager.xaml.cs">
+      <DependentUpon>manager.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\clients.cs">
       <DependentUpon>DBConnect.tt</DependentUpon>
     </Compile>
@@ -104,7 +107,6 @@
     <Compile Include="smena.xaml.cs">
       <DependentUpon>smena.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TimeDemo.cs" />
     <Page Include="admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -138,9 +140,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="manager.xaml.cs">
-      <DependentUpon>manager.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -175,11 +174,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="logo.ico" />
-    <Resource Include="logo.png" />
+    <Resource Include="Resourses\logo.ico" />
+    <Resource Include="Resourses\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resourses\admin.png" />
+    <Resource Include="Resourses\manager.png" />
+    <Resource Include="Resourses\star_smen.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Models\DBConnect.Context.tt">

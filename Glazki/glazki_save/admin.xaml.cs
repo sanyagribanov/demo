@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace glazki_save
 {
@@ -21,19 +22,44 @@ namespace glazki_save
     /// </summary>
     public partial class admin : Page
     {
-        gornolyzhnyi_kompleksEntities2 dataentities= new gornolyzhnyi_kompleksEntities2();
+        DispatcherTimer timerAdmin = new DispatcherTimer();
+        DateTime dateAdmin = new DateTime(0, 0);
         public admin()
         {
             InitializeComponent();
-        }
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            var query =
-            from product in dataentities.zakazy
-            orderby product.clients
-            select new { product.id, product.code, CategoryName = product.date_creation, product.time };
 
-            datagrid_1.ItemsSource = query.ToList();
+            UserTB_2.Text = bazaEntities1.CurrentUser.FIO;
+            RoleTB_2.Text = "(" + bazaEntities1.CurrentUser.role.RoleID + ")";
+
+            var fullFilePath = bazaEntities1.CurrentUser.Avatar;
+
+            BitmapImage bitmap = new BitmapImage();
+            bitmap.BeginInit();
+            bitmap.UriSource = new Uri(fullFilePath, UriKind.Relative);
+            bitmap.EndInit();
+
+            UserPhoto_2.Source = bitmap;
+
+            timerAdmin.Interval = TimeSpan.FromSeconds(1);
+            timerAdmin.Tick += timerTick;
+            timerAdmin.Start();
+        }
+
+        private void timerTick(object sender, EventArgs e)
+        {
+            dateAdmin = dateAdmin.AddSeconds(1);
+            TimeTB_2.Text = dateAdmin.ToString("HH:mm:ss");
+
+            if (TimeTB_2.Text == "00:05:00")
+            {
+                MessageBox.Show("Время сеанса подходит к концу!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            if (TimeTB_2.Text == "00:10:00")
+            {
+                timerAdmin.Stop();
+                App.IsGone = true;
+                NavigationService.Navigate(new admin());
+            }
         }
     }
 }
