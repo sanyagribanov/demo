@@ -8,6 +8,6 @@ namespace glazki_save.Classes
 {
     internal class DBConnect
     {
-        public static Models.bazaEntities1 modeldb;
+        public static Models.blagodat_1100Entities modeldb;
     }
 }

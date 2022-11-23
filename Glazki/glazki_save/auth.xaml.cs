@@ -26,7 +26,7 @@ namespace glazki_save
         {
             InitializeComponent();
             UpdateCaptcha();
-            Classes.DBConnect.modeldb = new Models.bazaEntities1();
+            Classes.DBConnect.modeldb = new Models.blagodat_1100Entities();
         }
         Random _random = new Random();
         public string Symbols;
@@ -44,7 +44,7 @@ namespace glazki_save
 
                 if (userObj != null && (CaptchatextBox.Text == Symbols.ToLower()))
                 {
-                    bazaEntities1.CurrentUser= userObj;
+                    blagodat_1100Entities.CurrentUser= userObj;
 
                     MessageBox.Show("Здравствуйте " + userObj.role.Title + ", " + userObj.FIO, "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                     switch (userObj.ID)

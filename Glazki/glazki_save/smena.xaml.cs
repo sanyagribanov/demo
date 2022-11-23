@@ -28,10 +28,10 @@ namespace glazki_save
         {
             InitializeComponent();
 
-            UserTB_1.Text = bazaEntities1.CurrentUser.FIO;
-            RoleTB_1.Text = "(" + bazaEntities1.CurrentUser.role.RoleID + ")";
+            UserTB_1.Text = blagodat_1100Entities.CurrentUser.FIO;
+            RoleTB_1.Text = "(" + blagodat_1100Entities.CurrentUser.role.RoleID + ")";
 
-            var fullFilePath = bazaEntities1.CurrentUser.Avatar;
+            var fullFilePath = blagodat_1100Entities.CurrentUser.img1;
 
             BitmapImage bitmap = new BitmapImage();
             bitmap.BeginInit();

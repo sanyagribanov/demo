@@ -13,26 +13,24 @@ namespace glazki_save.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class bazaEntities1 : DbContext
+    public partial class blagodat_1100Entities : DbContext
     {
-        public bazaEntities1()
-            : base("name=bazaEntities1")
+        public blagodat_1100Entities()
+            : base("name=blagodat_1100Entities")
         {
         }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-
+    
         public virtual DbSet<clients> clients { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<user> user { get; set; }
-        public virtual DbSet<uslugi> uslugi { get; set; }
         public virtual DbSet<zakazy> zakazy { get; set; }
         public virtual DbSet<role> role { get; set; }
+        public virtual DbSet<uslugi> uslugi { get; set; }
 
-        public static user CurrentUser = null ;
-
+        public static user CurrentUser = null;
     }
 }

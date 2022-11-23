@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Хранилище bazaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="Хранилище blagodat_1100Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="clients">
     <Key>
       <PropertyRef Name="id" />
@@ -8,30 +8,20 @@
     <Property Name="FIO" Type="varchar(max)" />
     <Property Name="Code_Clienta" Type="int" />
     <Property Name="Passport_Data" Type="varchar(max)" />
-    <Property Name="Birthday" Type="datetime" />
+    <Property Name="Birthday" Type="date" />
     <Property Name="Adress" Type="varchar(max)" />
-    <Property Name="e_mail" Type="varchar(max)" />
+    <Property Name="e-mail" Type="varchar(max)" />
     <Property Name="Password" Type="varchar(max)" />
     <Property Name="id_zakaza" Type="int" />
   </EntityType>
   <!--Ошибки, обнаруженные при создании:
-предупреждение 6002: В таблице или представлении "baza.dbo.role" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+предупреждение 6002: В таблице или представлении "blagodat_1100.dbo.role" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
   <EntityType Name="role">
     <Key>
       <PropertyRef Name="RoleID" />
     </Key>
     <Property Name="RoleID" Type="int" Nullable="false" />
     <Property Name="Title" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="user">
     <Key>
@@ -42,8 +32,10 @@
     <Property Name="RoleID" Type="int" Nullable="false" />
     <Property Name="Password" Type="nvarchar(max)" />
     <Property Name="FIO" Type="nvarchar(max)" />
-    <Property Name="Avatar" Type="varchar(max)" />
+    <Property Name="img1" Type="varchar(max)" />
   </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "blagodat_1100.dbo.uslugi" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
   <EntityType Name="uslugi">
     <Key>
       <PropertyRef Name="ID" />
@@ -60,12 +52,12 @@
     </Key>
     <Property Name="id" Type="int" Nullable="false" />
     <Property Name="code" Type="varchar(max)" />
-    <Property Name="date_creation" Type="datetime" />
+    <Property Name="date_creation" Type="date" />
     <Property Name="time" Type="time" Precision="7" />
     <Property Name="code_client" Type="int" />
     <Property Name="uslugi" Type="nvarchar(max)" />
     <Property Name="status" Type="varchar(max)" />
-    <Property Name="date_of_closing" Type="datetime" />
+    <Property Name="date_of_closing" Type="date" />
     <Property Name="time_prokat" Type="nvarchar(max)" />
   </EntityType>
   <Association Name="FK_clients_zakazy">
@@ -104,17 +96,24 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Хранилище bazaModelContainer">
+  <EntityContainer Name="Хранилище blagodat_1100ModelContainer">
     <EntitySet Name="clients" EntityType="Self.clients" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="uslugi" EntityType="Self.uslugi" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="zakazy" EntityType="Self.zakazy" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="role" EntityType="Self.role" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [role].[RoleID] AS [RoleID], 
     [role].[Title] AS [Title]
     FROM [dbo].[role] AS [role]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="uslugi" EntityType="Self.uslugi" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [uslugi].[ID] AS [ID], 
+    [uslugi].[title] AS [title], 
+    [uslugi].[code] AS [code], 
+    [uslugi].[price] AS [price], 
+    [uslugi].[id_zakazy] AS [id_zakazy]
+    FROM [dbo].[uslugi] AS [uslugi]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK_clients_zakazy" Association="Self.FK_clients_zakazy">
       <End Role="zakazy" EntitySet="zakazy" />

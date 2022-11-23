@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище bazaModelContainer" CdmEntityContainer="bazaEntities1">
+  <EntityContainerMapping StorageEntityContainer="Хранилище blagodat_1100ModelContainer" CdmEntityContainer="blagodat_1100Entities">
     <EntitySetMapping Name="clients">
-      <EntityTypeMapping TypeName="bazaModel.clients">
+      <EntityTypeMapping TypeName="blagodat_1100Model.clients">
         <MappingFragment StoreEntitySet="clients">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="FIO" ColumnName="FIO" />
@@ -10,48 +10,26 @@
           <ScalarProperty Name="Passport_Data" ColumnName="Passport_Data" />
           <ScalarProperty Name="Birthday" ColumnName="Birthday" />
           <ScalarProperty Name="Adress" ColumnName="Adress" />
-          <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+          <ScalarProperty Name="e_mail" ColumnName="e-mail" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="id_zakaza" ColumnName="id_zakaza" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="bazaModel.sysdiagrams">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="user">
-      <EntityTypeMapping TypeName="bazaModel.user">
+      <EntityTypeMapping TypeName="blagodat_1100Model.user">
         <MappingFragment StoreEntitySet="user">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="RoleID" ColumnName="RoleID" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="FIO" ColumnName="FIO" />
-          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="uslugi">
-      <EntityTypeMapping TypeName="bazaModel.uslugi">
-        <MappingFragment StoreEntitySet="uslugi">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="title" ColumnName="title" />
-          <ScalarProperty Name="code" ColumnName="code" />
-          <ScalarProperty Name="price" ColumnName="price" />
-          <ScalarProperty Name="id_zakazy" ColumnName="id_zakazy" />
+          <ScalarProperty Name="img1" ColumnName="img1" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="zakazy">
-      <EntityTypeMapping TypeName="bazaModel.zakazy">
+      <EntityTypeMapping TypeName="blagodat_1100Model.zakazy">
         <MappingFragment StoreEntitySet="zakazy">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="code" ColumnName="code" />
@@ -66,10 +44,21 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="role">
-      <EntityTypeMapping TypeName="bazaModel.role">
+      <EntityTypeMapping TypeName="blagodat_1100Model.role">
         <MappingFragment StoreEntitySet="role">
           <ScalarProperty Name="RoleID" ColumnName="RoleID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uslugi">
+      <EntityTypeMapping TypeName="blagodat_1100Model.uslugi">
+        <MappingFragment StoreEntitySet="uslugi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="id_zakazy" ColumnName="id_zakazy" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

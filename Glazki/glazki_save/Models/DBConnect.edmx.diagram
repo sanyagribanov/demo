@@ -4,16 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8f21442902c14b9481b029672a64f989" Name="Diagram1">
-        <EntityTypeShape EntityType="bazaModel.clients" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="bazaModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bazaModel.user" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="bazaModel.uslugi" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bazaModel.zakazy" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="bazaModel.role" Width="1.5" PointX="8" PointY="1.375" IsExpanded="true" />
-        <AssociationConnector Association="bazaModel.FK_clients_zakazy" ManuallyRouted="false" />
-        <AssociationConnector Association="bazaModel.FK_role_user" ManuallyRouted="false" />
-        <AssociationConnector Association="bazaModel.FK_uslugi_zakazy" ManuallyRouted="false" />
+      <Diagram DiagramId="b8bb7372dbdf4321b78c77cf3db41e84" Name="Diagram1">
+        <EntityTypeShape EntityType="blagodat_1100Model.clients" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="blagodat_1100Model.user" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="blagodat_1100Model.zakazy" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="blagodat_1100Model.role" Width="1.5" PointX="8" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="blagodat_1100Model.uslugi" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="blagodat_1100Model.FK_clients_zakazy" ManuallyRouted="false" />
+        <AssociationConnector Association="blagodat_1100Model.FK_role_user" ManuallyRouted="false" />
+        <AssociationConnector Association="blagodat_1100Model.FK_uslugi_zakazy" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

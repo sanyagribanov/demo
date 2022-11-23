@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:glazki_save"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Icon="Resourses/logo.ico">
+        Title="MainWindow" Height="450" Width="800" Icon="res/logo.ico">
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="150"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Name="AppImage"  HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Source="Resourses/logo.png"/>
+        <Image Name="AppImage"  HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Source="res/logo.png"/>
         <StackPanel  HorizontalAlignment="Right" VerticalAlignment="Top">
             <Button Content="Администратор" Margin="0"  Width="120" Height="30" FontSize="14" Foreground="White" Click="Admin_Click"/>
             <Button Content="Менеджер"  Margin="0"  Width="120" Height="30"  FontSize="14" Foreground="White" Click="Manager_Click"/>

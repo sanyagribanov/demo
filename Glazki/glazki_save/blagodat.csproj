@@ -72,37 +72,34 @@
       <DependentUpon>manager.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\clients.cs">
-      <DependentUpon>DBConnect.tt</DependentUpon>
+      <DependentUpon>DbConnect.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBConnect.Context.cs">
+    <Compile Include="Models\DbConnect.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBConnect.Context.tt</DependentUpon>
+      <DependentUpon>DbConnect.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBConnect.cs">
+    <Compile Include="Models\DbConnect.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBConnect.tt</DependentUpon>
+      <DependentUpon>DbConnect.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBConnect.Designer.cs">
+    <Compile Include="Models\DbConnect.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBConnect.edmx</DependentUpon>
+      <DependentUpon>DbConnect.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\role.cs">
-      <DependentUpon>DBConnect.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>DBConnect.tt</DependentUpon>
+      <DependentUpon>DbConnect.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\user.cs">
-      <DependentUpon>DBConnect.tt</DependentUpon>
+      <DependentUpon>DbConnect.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\uslugi.cs">
-      <DependentUpon>DBConnect.tt</DependentUpon>
+      <DependentUpon>DbConnect.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\zakazy.cs">
-      <DependentUpon>DBConnect.tt</DependentUpon>
+      <DependentUpon>DbConnect.tt</DependentUpon>
     </Compile>
     <Compile Include="smena.xaml.cs">
       <DependentUpon>smena.xaml</DependentUpon>
@@ -157,12 +154,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Models\DBConnect.edmx">
+    <EntityDeploy Include="Models\DbConnect.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBConnect.Designer.cs</LastGenOutput>
+      <LastGenOutput>DbConnect.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\DBConnect.edmx.diagram">
-      <DependentUpon>DBConnect.edmx</DependentUpon>
+    <None Include="Models\DbConnect.edmx.diagram">
+      <DependentUpon>DbConnect.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -174,27 +171,27 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resourses\logo.ico" />
-    <Resource Include="Resourses\logo.png" />
+    <Resource Include="res\logo.ico" />
+    <Resource Include="res\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resourses\admin.png" />
-    <Resource Include="Resourses\manager.png" />
-    <Resource Include="Resourses\star_smen.png" />
+    <Resource Include="res\admin.png" />
+    <Resource Include="res\manager.png" />
+    <Resource Include="res\star_smen.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\DBConnect.Context.tt">
+    <Content Include="Models\DbConnect.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBConnect.edmx</DependentUpon>
-      <LastGenOutput>DBConnect.Context.cs</LastGenOutput>
+      <DependentUpon>DbConnect.edmx</DependentUpon>
+      <LastGenOutput>DbConnect.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\DBConnect.tt">
+    <Content Include="Models\DbConnect.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBConnect.edmx</DependentUpon>
-      <LastGenOutput>DBConnect.cs</LastGenOutput>
+      <DependentUpon>DbConnect.edmx</DependentUpon>
+      <LastGenOutput>DbConnect.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище bazaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище blagodat_1100Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="clients">
           <Key>
             <PropertyRef Name="id" />
@@ -13,30 +13,20 @@
           <Property Name="FIO" Type="varchar(max)" />
           <Property Name="Code_Clienta" Type="int" />
           <Property Name="Passport_Data" Type="varchar(max)" />
-          <Property Name="Birthday" Type="datetime" />
+          <Property Name="Birthday" Type="date" />
           <Property Name="Adress" Type="varchar(max)" />
-          <Property Name="e_mail" Type="varchar(max)" />
+          <Property Name="e-mail" Type="varchar(max)" />
           <Property Name="Password" Type="varchar(max)" />
           <Property Name="id_zakaza" Type="int" />
         </EntityType>
         <!--Ошибки, обнаруженные при создании:
-предупреждение 6002: В таблице или представлении "baza.dbo.role" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+предупреждение 6002: В таблице или представлении "blagodat_1100.dbo.role" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="role">
           <Key>
             <PropertyRef Name="RoleID" />
           </Key>
           <Property Name="RoleID" Type="int" Nullable="false" />
           <Property Name="Title" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="user">
           <Key>
@@ -47,8 +37,10 @@
           <Property Name="RoleID" Type="int" Nullable="false" />
           <Property Name="Password" Type="nvarchar(max)" />
           <Property Name="FIO" Type="nvarchar(max)" />
-          <Property Name="Avatar" Type="varchar(max)" />
+          <Property Name="img1" Type="varchar(max)" />
         </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "blagodat_1100.dbo.uslugi" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="uslugi">
           <Key>
             <PropertyRef Name="ID" />
@@ -65,12 +57,12 @@
           </Key>
           <Property Name="id" Type="int" Nullable="false" />
           <Property Name="code" Type="varchar(max)" />
-          <Property Name="date_creation" Type="datetime" />
+          <Property Name="date_creation" Type="date" />
           <Property Name="time" Type="time" Precision="7" />
           <Property Name="code_client" Type="int" />
           <Property Name="uslugi" Type="nvarchar(max)" />
           <Property Name="status" Type="varchar(max)" />
-          <Property Name="date_of_closing" Type="datetime" />
+          <Property Name="date_of_closing" Type="date" />
           <Property Name="time_prokat" Type="nvarchar(max)" />
         </EntityType>
         <Association Name="FK_clients_zakazy">
@@ -109,17 +101,24 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище bazaModelContainer">
+        <EntityContainer Name="Хранилище blagodat_1100ModelContainer">
           <EntitySet Name="clients" EntityType="Self.clients" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="uslugi" EntityType="Self.uslugi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="zakazy" EntityType="Self.zakazy" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="role" EntityType="Self.role" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [role].[RoleID] AS [RoleID], 
     [role].[Title] AS [Title]
     FROM [dbo].[role] AS [role]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="uslugi" EntityType="Self.uslugi" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [uslugi].[ID] AS [ID], 
+    [uslugi].[title] AS [title], 
+    [uslugi].[code] AS [code], 
+    [uslugi].[price] AS [price], 
+    [uslugi].[id_zakazy] AS [id_zakazy]
+    FROM [dbo].[uslugi] AS [uslugi]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_clients_zakazy" Association="Self.FK_clients_zakazy">
             <End Role="zakazy" EntitySet="zakazy" />
@@ -138,7 +137,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="bazaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="blagodat_1100Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="clients">
           <Key>
             <PropertyRef Name="id" />
@@ -147,22 +146,12 @@
           <Property Name="FIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Code_Clienta" Type="Int32" />
           <Property Name="Passport_Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Birthday" Type="DateTime" Precision="3" />
+          <Property Name="Birthday" Type="DateTime" Precision="0" />
           <Property Name="Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="e_mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="id_zakaza" Type="Int32" />
           <NavigationProperty Name="zakazy" Relationship="Self.FK_clients_zakazy" FromRole="clients" ToRole="zakazy" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="user">
           <Key>
@@ -173,19 +162,8 @@
           <Property Name="RoleID" Type="Int32" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="FIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Avatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="img1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="role" Relationship="Self.FK_role_user" FromRole="user" ToRole="role" />
-        </EntityType>
-        <EntityType Name="uslugi">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="price" Type="Int32" />
-          <Property Name="id_zakazy" Type="Int32" />
-          <NavigationProperty Name="zakazy" Relationship="Self.FK_uslugi_zakazy" FromRole="uslugi" ToRole="zakazy" />
         </EntityType>
         <EntityType Name="zakazy">
           <Key>
@@ -193,12 +171,12 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="date_creation" Type="DateTime" Precision="3" />
+          <Property Name="date_creation" Type="DateTime" Precision="0" />
           <Property Name="time" Type="Time" Precision="7" />
           <Property Name="code_client" Type="Int32" />
           <Property Name="uslugi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="date_of_closing" Type="DateTime" Precision="3" />
+          <Property Name="date_of_closing" Type="DateTime" Precision="0" />
           <Property Name="time_prokat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="clients" Relationship="Self.FK_clients_zakazy" FromRole="zakazy" ToRole="clients" />
           <NavigationProperty Name="uslugi1" Relationship="Self.FK_uslugi_zakazy" FromRole="zakazy" ToRole="uslugi" />
@@ -210,6 +188,17 @@
           <Property Name="RoleID" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="user" Relationship="Self.FK_role_user" FromRole="role" ToRole="user" />
+        </EntityType>
+        <EntityType Name="uslugi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Int32" />
+          <Property Name="id_zakazy" Type="Int32" />
+          <NavigationProperty Name="zakazy" Relationship="Self.FK_uslugi_zakazy" FromRole="uslugi" ToRole="zakazy" />
         </EntityType>
         <Association Name="FK_clients_zakazy">
           <End Role="zakazy" Type="Self.zakazy" Multiplicity="0..1" />
@@ -247,13 +236,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="bazaEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="blagodat_1100Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="clients" EntityType="Self.clients" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="user" EntityType="Self.user" />
-          <EntitySet Name="uslugi" EntityType="Self.uslugi" />
           <EntitySet Name="zakazy" EntityType="Self.zakazy" />
           <EntitySet Name="role" EntityType="Self.role" />
+          <EntitySet Name="uslugi" EntityType="Self.uslugi" />
           <AssociationSet Name="FK_clients_zakazy" Association="Self.FK_clients_zakazy">
             <End Role="zakazy" EntitySet="zakazy" />
             <End Role="clients" EntitySet="clients" />
@@ -272,9 +260,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище bazaModelContainer" CdmEntityContainer="bazaEntities1">
+        <EntityContainerMapping StorageEntityContainer="Хранилище blagodat_1100ModelContainer" CdmEntityContainer="blagodat_1100Entities">
           <EntitySetMapping Name="clients">
-            <EntityTypeMapping TypeName="bazaModel.clients">
+            <EntityTypeMapping TypeName="blagodat_1100Model.clients">
               <MappingFragment StoreEntitySet="clients">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="FIO" ColumnName="FIO" />
@@ -282,48 +270,26 @@
                 <ScalarProperty Name="Passport_Data" ColumnName="Passport_Data" />
                 <ScalarProperty Name="Birthday" ColumnName="Birthday" />
                 <ScalarProperty Name="Adress" ColumnName="Adress" />
-                <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+                <ScalarProperty Name="e_mail" ColumnName="e-mail" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="id_zakaza" ColumnName="id_zakaza" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="bazaModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="user">
-            <EntityTypeMapping TypeName="bazaModel.user">
+            <EntityTypeMapping TypeName="blagodat_1100Model.user">
               <MappingFragment StoreEntitySet="user">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="RoleID" ColumnName="RoleID" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="FIO" ColumnName="FIO" />
-                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="uslugi">
-            <EntityTypeMapping TypeName="bazaModel.uslugi">
-              <MappingFragment StoreEntitySet="uslugi">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="code" ColumnName="code" />
-                <ScalarProperty Name="price" ColumnName="price" />
-                <ScalarProperty Name="id_zakazy" ColumnName="id_zakazy" />
+                <ScalarProperty Name="img1" ColumnName="img1" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="zakazy">
-            <EntityTypeMapping TypeName="bazaModel.zakazy">
+            <EntityTypeMapping TypeName="blagodat_1100Model.zakazy">
               <MappingFragment StoreEntitySet="zakazy">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="code" ColumnName="code" />
@@ -338,10 +304,21 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="role">
-            <EntityTypeMapping TypeName="bazaModel.role">
+            <EntityTypeMapping TypeName="blagodat_1100Model.role">
               <MappingFragment StoreEntitySet="role">
                 <ScalarProperty Name="RoleID" ColumnName="RoleID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="uslugi">
+            <EntityTypeMapping TypeName="blagodat_1100Model.uslugi">
+              <MappingFragment StoreEntitySet="uslugi">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="id_zakazy" ColumnName="id_zakazy" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
