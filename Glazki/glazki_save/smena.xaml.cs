@@ -50,15 +50,16 @@ namespace glazki_save
             date = date.AddSeconds(1);
             TimeTB_1.Text = date.ToString("HH:mm:ss");
 
-            if (TimeTB_1.Text == "00:05:00")
+            if (TimeTB_1.Text == "00:00:05")
             {
                 MessageBox.Show("Время сеанса подходит к концу!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            if (TimeTB_1.Text == "00:10:00")
+            if (TimeTB_1.Text == "00:00:10")
             {
                 timer.Stop();
                 App.IsGone = true;
-                NavigationService.Navigate(new admin());
+                NavigationService.Navigate(new auth());
+                MessageBox.Show("Сеанс подошел к концу!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
     }
