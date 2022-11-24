@@ -180,7 +180,7 @@
   <ItemGroup>
     <Resource Include="res\admin.png" />
     <Resource Include="res\manager.png" />
-    <Resource Include="res\star_smen.png" />
+    <Resource Include="res\smena.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Models\DbConnect.Context.tt">
