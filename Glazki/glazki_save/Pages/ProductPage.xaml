@@ -16,15 +16,13 @@
         </Grid.RowDefinitions>
         <DataGrid x:Name="DGridClients" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="id" Binding="{Binding id}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="id" Binding="{Binding }" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="FIO" Binding="{Binding FIO}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Code_Clienta" Binding="{Binding Code_Clienta}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Passport_Data" Binding="{Binding Passport_Data}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Birthday" Binding="{Binding Birthday}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Adress" Binding="{Binding Adress}" Width="*"></DataGridTextColumn>
-                <DataGridTextColumn Header="e-mail" Binding="{Binding e-mail}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Password" Binding="{Binding Password}" Width="*"></DataGridTextColumn>
-                <DataGridTextColumn Header="id_zakaza" Binding="{Binding id_zakaza}" Width="*"></DataGridTextColumn>
                 <DataGridTemplateColumn Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

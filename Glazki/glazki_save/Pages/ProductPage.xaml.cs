@@ -47,13 +47,13 @@ namespace glazki_save.Pages
         {
             try
             {
-                DGridClients.ItemsSource = DBConnect.modeldb.clients.ToList();
+                DGridClients.ItemsSource = blagodatEntities8.GetContext().clients.ToList();
                 DGridClients.Items.Refresh();
             }
             catch (Exception ex)
             {
                 
-                MessageBox.Show($"{ex.Message.ToString()}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"{ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
         }

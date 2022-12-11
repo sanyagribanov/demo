@@ -15,9 +15,18 @@ namespace glazki_save.Models
     
     public partial class blagodatEntities8 : DbContext
     {
+        private static blagodatEntities8 _context;
         public blagodatEntities8()
             : base("name=blagodatEntities8")
         {
+        }
+
+        public static blagodatEntities8 GetContext()
+        {
+            if (_context == null)
+                _context = new blagodatEntities8();
+
+            return _context;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

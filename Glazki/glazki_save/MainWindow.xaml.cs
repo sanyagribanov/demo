@@ -24,7 +24,7 @@ namespace glazki_save
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new LoginPage());
+            MainFrame.Navigate(new ProductPage());
 
         }
         private void Admin_Click(Object sender, RoutedEventArgs e)
