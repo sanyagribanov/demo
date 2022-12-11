@@ -2,7 +2,9 @@
 login    	password<br>
 admin		123<br>
 user		2<br>
-
+# Cсылки
+[Регистрация](#Регистрация)
+[Хэширование](#Хэширование)
 # Images
 
 ![изображение](https://user-images.githubusercontent.com/86486142/203646034-c91b47e7-4b63-4c05-9104-70d759639bc0.png)
@@ -13,3 +15,7 @@ user		2<br>
 
 # Регистрация
 ![изображение](https://user-images.githubusercontent.com/86486142/206909040-24c5e575-f20a-4753-8816-76f48c7c0b2d.png)
+# Хэширование
+![изображение](https://user-images.githubusercontent.com/86486142/206911384-bbca2aa7-a97f-4376-b5cb-9c0954cee39a.png)
+![изображение](https://user-images.githubusercontent.com/86486142/206911389-c99d575e-248f-479f-9194-084a0767ae72.png)
+
