@@ -1,4 +1,8 @@
+<<<<<<< HEAD:Glazki/glazki_save/Models/blagodatConnect.Designer.cs
 ﻿// Создание кода T4 для модели "C:\WORKSPACE\demo\Glazki\glazki_save\Models\blagodatConnect.edmx" включено. 
+=======
+﻿// Создание кода T4 для модели "C:\Users\alexander\Desktop\хлам\demo\Glazki\glazki_save\Models\DbConnect.edmx" включено. 
+>>>>>>> 9488e16bffa6539e0f4de69f14e0cf936a72ddcd:Glazki/glazki_save/Models/DBConnect.Designer.cs
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

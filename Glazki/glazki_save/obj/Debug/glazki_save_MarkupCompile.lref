@@ -1,4 +1,5 @@
 ﻿
+<<<<<<< HEAD
 FC:\WORKSPACE\demo\Glazki\glazki_save\App.xaml;;
 FC:\WORKSPACE\demo\Glazki\glazki_save\Pages\AddUser.xaml;;
 FC:\WORKSPACE\demo\Glazki\glazki_save\Pages\admin.xaml;;
@@ -8,4 +9,12 @@ FC:\WORKSPACE\demo\Glazki\glazki_save\Pages\LoginPage.xaml;;
 FC:\WORKSPACE\demo\Glazki\glazki_save\MainWindow.xaml;;
 FC:\WORKSPACE\demo\Glazki\glazki_save\Pages\manager.xaml;;
 FC:\WORKSPACE\demo\Glazki\glazki_save\Pages\ProductPage.xaml;;
+=======
+FC:\Users\alexander\Desktop\хлам\demo\Glazki\glazki_save\App.xaml;;
+FC:\Users\alexander\Desktop\хлам\demo\Glazki\glazki_save\admin.xaml;;
+FC:\Users\alexander\Desktop\хлам\demo\Glazki\glazki_save\auth.xaml;;
+FC:\Users\alexander\Desktop\хлам\demo\Glazki\glazki_save\MainWindow.xaml;;
+FC:\Users\alexander\Desktop\хлам\demo\Glazki\glazki_save\manager.xaml;;
+FC:\Users\alexander\Desktop\хлам\demo\Glazki\glazki_save\smena.xaml;;
+>>>>>>> 9488e16bffa6539e0f4de69f14e0cf936a72ddcd
 

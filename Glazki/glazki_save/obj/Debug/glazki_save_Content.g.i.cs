@@ -8,7 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/blagodatconnect.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/blagodatconnect.tt")]
+=======
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/dbconnect.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/dbconnect.edmx.sql")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/dbconnect.tt")]
+>>>>>>> 9488e16bffa6539e0f4de69f14e0cf936a72ddcd
 
 
