@@ -4,7 +4,8 @@ admin		123<br>
 user		2<br>
 # Cсылки
 [Регистрация](#Регистрация)<br>
-[Хэширование](#Хэширование)
+[Хэширование](#Хэширование)<br>
+[Вывод DataGrid](#Вывод DataGrid)
 # Images
 
 ![изображение](https://user-images.githubusercontent.com/86486142/203646034-c91b47e7-4b63-4c05-9104-70d759639bc0.png)
@@ -18,5 +19,7 @@ user		2<br>
 # Хэширование
 ![изображение](https://user-images.githubusercontent.com/86486142/206911384-bbca2aa7-a97f-4376-b5cb-9c0954cee39a.png)
 ![изображение](https://user-images.githubusercontent.com/86486142/206911493-c1220d58-a0ae-4a83-9039-beb0094537d3.png)
+# Вывод DataGrid
+![изображение](https://user-images.githubusercontent.com/86486142/206923035-880afdea-d926-4c3a-841a-6d19d8c4d6f1.png)
 
 
