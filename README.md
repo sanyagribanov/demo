@@ -5,7 +5,7 @@ user		2<br>
 # Cсылки
 [Регистрация](#Регистрация)<br>
 [Хэширование](#Хэширование)<br>
-[Вывод DataGrid](#Вывод DataGrid)
+[Datagrid](# Вывод DataGrid)
 # Images
 
 ![изображение](https://user-images.githubusercontent.com/86486142/203646034-c91b47e7-4b63-4c05-9104-70d759639bc0.png)
