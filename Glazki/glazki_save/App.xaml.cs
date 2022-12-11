@@ -1,4 +1,5 @@
-﻿using System;
+﻿using glazki_save.Models;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -14,5 +15,7 @@ namespace glazki_save
     public partial class App : Application
     {
         public static bool IsGone { get; internal set; }
+
+        
     }
 }

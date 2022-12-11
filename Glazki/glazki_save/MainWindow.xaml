@@ -13,17 +13,17 @@
         </Grid.RowDefinitions>
         <Image Name="AppImage"  HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Source="res/logo.png"/>
         <StackPanel  HorizontalAlignment="Right" VerticalAlignment="Top">
-            <Button Content="Администратор" Margin="0"  Width="120" Height="30" FontSize="14" Foreground="White" Click="Admin_Click"/>
-            <Button Content="Менеджер"  Margin="0"  Width="120" Height="30"  FontSize="14" Foreground="White" Click="Manager_Click"/>
-            <Button Content="Ст. смены"  Margin="0"  Width="120" Height="30" FontSize="14" Foreground="White" Click="Smena_Click"/>
-            <Button Content="Назад" Width="120" Height="30" Margin="0" FontSize="14" Foreground="White" Name="BackBtn" Click="BackBtn_Click"/>
+            <Button Content="Администратор" Margin="0"  Width="120" Height="30" FontSize="12" Foreground="White" Click="Admin_Click"/>
+            <Button Content="Пользователь"  Margin="0"  Width="120" Height="30"  FontSize="12" Foreground="White" Click="Manager_Click"/>
+            
+            <Button Content="Работа с данными" Width="120" Height="30" Margin="0" FontSize="12" Foreground="White" Name="BackBtn" Click="BackBtn_Click"/>
         </StackPanel>
 
-        <Label Content="ГК Благодать" HorizontalAlignment="Left" Margin="215,32,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="25" FontStyle="Oblique" RenderTransformOrigin="0.059,0.151" Height="35" Width="319"/>
+        <Label Content="ГК Благодать" HorizontalAlignment="Center" Margin="215,32,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="25" FontStyle="Oblique" RenderTransformOrigin="0.059,0.151" Height="35" Width="319"/>
         <Frame Grid.Row="1" Name="MainFrame" Navigated="MainFrame_Navigated" NavigationUIVisibility="Hidden"/>
 
         <Grid>
-            <DataGrid Margin="0,120,0,0" Background="#7ee69b"/>
+            <DataGrid Margin="0,90,0,0" Background="#7ee69b"/>
             <Frame Width="200" Height="80" Margin="0 110 0 0" x:Name="Timer"></Frame>
         </Grid>
     </Grid>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище blagodatModelContainer" CdmEntityContainer="blagodatEntities6">
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="blagodatModel.clients">
+        <MappingFragment StoreEntitySet="clients">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="Code_Clienta" ColumnName="Code_Clienta" />
+          <ScalarProperty Name="Passport_Data" ColumnName="Passport_Data" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="e_mail" ColumnName="e-mail" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="id_zakaza" ColumnName="id_zakaza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="blagodatModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="img1" ColumnName="img1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zakazy">
+      <EntityTypeMapping TypeName="blagodatModel.zakazy">
+        <MappingFragment StoreEntitySet="zakazy">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="date_creation" ColumnName="date_creation" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="code_client" ColumnName="code_client" />
+          <ScalarProperty Name="uslugi" ColumnName="uslugi" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="date_of_closing" ColumnName="date_of_closing" />
+          <ScalarProperty Name="time_prokat" ColumnName="time_prokat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="role">
+      <EntityTypeMapping TypeName="blagodatModel.role">
+        <MappingFragment StoreEntitySet="role">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uslugi">
+      <EntityTypeMapping TypeName="blagodatModel.uslugi">
+        <MappingFragment StoreEntitySet="uslugi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="id_zakazy" ColumnName="id_zakazy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

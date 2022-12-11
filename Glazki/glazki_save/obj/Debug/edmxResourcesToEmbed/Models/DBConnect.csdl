@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="blagodat_1100Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="blagodatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="clients">
     <Key>
       <PropertyRef Name="id" />
@@ -98,7 +98,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="blagodat_1100Entities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="blagodatEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="clients" EntityType="Self.clients" />
     <EntitySet Name="user" EntityType="Self.user" />
     <EntitySet Name="zakazy" EntityType="Self.zakazy" />

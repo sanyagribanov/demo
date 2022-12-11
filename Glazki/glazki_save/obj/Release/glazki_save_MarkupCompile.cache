@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\alexander\Desktop\demo\demo\Glazki\glazki_save\obj\Release\
+C:\WORKSPACE\demo\Glazki\glazki_save\obj\Release\
 glazki_save
 none
 false
 TRACE
-C:\Users\alexander\Desktop\demo\demo\Glazki\glazki_save\App.xaml
-6740102023
+C:\WORKSPACE\demo\Glazki\glazki_save\App.xaml
+51812923359
 2-182295171
-211302518108
-18-650295447
-admin.xaml;auth.xaml;captcha.xaml;MainWindow.xaml;manager.xaml;smena.xaml;
+181593489011
+18-1514118611
+Pages\admin.xaml;Pages\captcha.xaml;Pages\LoginPage.xaml;MainWindow.xaml;Pages\manager.xaml;
 
 True
 

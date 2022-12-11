@@ -1,4 +1,5 @@
-﻿using System;
+﻿using glazki_save.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ namespace glazki_save
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new auth());
+            MainFrame.Navigate(new LoginPage());
 
         }
         private void Admin_Click(Object sender, RoutedEventArgs e)
@@ -36,11 +37,6 @@ namespace glazki_save
             MainFrame.Navigate(new manager());
         }
 
-        private void Smena_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new smena());
-        }
-
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {
 
@@ -48,7 +44,7 @@ namespace glazki_save
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
-        MainFrame.GoBack();
+            MainFrame.Navigate(new Pages.ProductPage());
         }
     }
 }

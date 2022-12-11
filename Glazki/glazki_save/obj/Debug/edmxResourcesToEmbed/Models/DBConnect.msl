@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище blagodat_1100ModelContainer" CdmEntityContainer="blagodat_1100Entities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище blagodatModelContainer" CdmEntityContainer="blagodatEntities1">
     <EntitySetMapping Name="clients">
-      <EntityTypeMapping TypeName="blagodat_1100Model.clients">
+      <EntityTypeMapping TypeName="blagodatModel.clients">
         <MappingFragment StoreEntitySet="clients">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="FIO" ColumnName="FIO" />
@@ -17,7 +17,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="user">
-      <EntityTypeMapping TypeName="blagodat_1100Model.user">
+      <EntityTypeMapping TypeName="blagodatModel.user">
         <MappingFragment StoreEntitySet="user">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -29,7 +29,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="zakazy">
-      <EntityTypeMapping TypeName="blagodat_1100Model.zakazy">
+      <EntityTypeMapping TypeName="blagodatModel.zakazy">
         <MappingFragment StoreEntitySet="zakazy">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="code" ColumnName="code" />
@@ -44,7 +44,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="role">
-      <EntityTypeMapping TypeName="blagodat_1100Model.role">
+      <EntityTypeMapping TypeName="blagodatModel.role">
         <MappingFragment StoreEntitySet="role">
           <ScalarProperty Name="RoleID" ColumnName="RoleID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
@@ -52,7 +52,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="uslugi">
-      <EntityTypeMapping TypeName="blagodat_1100Model.uslugi">
+      <EntityTypeMapping TypeName="blagodatModel.uslugi">
         <MappingFragment StoreEntitySet="uslugi">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="title" ColumnName="title" />

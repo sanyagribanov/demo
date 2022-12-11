@@ -1,4 +1,5 @@
-﻿using System;
+﻿using glazki_save.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace glazki_save.Classes
 {
-    internal class DBConnect
+    public static class DBConnect
     {
-        public static Models.blagodat_1100Entities modeldb;
+        public static blagodatEntities8 modeldb;
     }
 }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Хранилище blagodat_1100Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="Хранилище blagodatModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="clients">
     <Key>
       <PropertyRef Name="id" />
@@ -15,7 +15,7 @@
     <Property Name="id_zakaza" Type="int" />
   </EntityType>
   <!--Ошибки, обнаруженные при создании:
-предупреждение 6002: В таблице или представлении "blagodat_1100.dbo.role" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+предупреждение 6002: В таблице или представлении "blagodat.dbo.role" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
   <EntityType Name="role">
     <Key>
       <PropertyRef Name="RoleID" />
@@ -35,7 +35,7 @@
     <Property Name="img1" Type="varchar(max)" />
   </EntityType>
   <!--Ошибки, обнаруженные при создании:
-предупреждение 6002: В таблице или представлении "blagodat_1100.dbo.uslugi" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+предупреждение 6002: В таблице или представлении "blagodat.dbo.uslugi" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
   <EntityType Name="uslugi">
     <Key>
       <PropertyRef Name="ID" />
@@ -96,7 +96,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Хранилище blagodat_1100ModelContainer">
+  <EntityContainer Name="Хранилище blagodatModelContainer">
     <EntitySet Name="clients" EntityType="Self.clients" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="zakazy" EntityType="Self.zakazy" Schema="dbo" store:Type="Tables" />
