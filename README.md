@@ -17,5 +17,6 @@ user		2<br>
 ![изображение](https://user-images.githubusercontent.com/86486142/206909040-24c5e575-f20a-4753-8816-76f48c7c0b2d.png)
 # Хэширование
 ![изображение](https://user-images.githubusercontent.com/86486142/206911384-bbca2aa7-a97f-4376-b5cb-9c0954cee39a.png)
-![изображение](https://user-images.githubusercontent.com/86486142/206911389-c99d575e-248f-479f-9194-084a0767ae72.png)
+![изображение](https://user-images.githubusercontent.com/86486142/206911493-c1220d58-a0ae-4a83-9039-beb0094537d3.png)
+
 
