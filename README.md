@@ -5,7 +5,7 @@ user		2<br>
 # Cсылки
 [Регистрация](#Регистрация)<br>
 [Хэширование](#Хэширование)<br>
-[Datagrid](https://github.com/sanyagribanov/demo/blob/main/README.md#%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4-datagrid)
+[Datagrid](https://github.com/sanyagribanov/demo/blob/main/README.md#%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4-datagrid) <br>
 [Видео](#Видео)
 # Images
 
