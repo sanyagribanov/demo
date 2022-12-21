@@ -236,7 +236,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="blagodatEntities8" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="blagodatEntities9" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="clients" EntityType="Self.clients" />
           <EntitySet Name="user" EntityType="Self.user" />
           <EntitySet Name="zakazy" EntityType="Self.zakazy" />
@@ -260,7 +260,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище blagodatModelContainer" CdmEntityContainer="blagodatEntities8">
+        <EntityContainerMapping StorageEntityContainer="Хранилище blagodatModelContainer" CdmEntityContainer="blagodatEntities9">
           <EntitySetMapping Name="clients">
             <EntityTypeMapping TypeName="blagodatModel.clients">
               <MappingFragment StoreEntitySet="clients">

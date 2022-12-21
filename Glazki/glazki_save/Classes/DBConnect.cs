@@ -9,6 +9,6 @@ namespace glazki_save.Classes
 {
     public static class DBConnect
     {
-        public static blagodatEntities8 modeldb;
+        public static blagodatEntities9 modeldb;
     }
 }

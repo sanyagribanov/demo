@@ -17,31 +17,40 @@
                 <TextBlock Text="Логин: "/>
                 <TextBox Name="TBx_Login" Width="120" Margin="8 0 0 10"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
+            <!-- tut nado pisat login-->
+                <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Пароль: "/>
                 <PasswordBox Name="PBx_Password" Width="120" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="1 0 0 0"/>
+                <!-- zdes parol-->
                 <Button Name="ShowPass" Content="Показать Пароль" Click="ShowPass_Click" Margin="5 0" Width="120"/>
             </StackPanel>
+            <!-- knopka dlya pokaza parolya-->
             <StackPanel Orientation="Horizontal">
                 <Button Name="HashPass" Content="Хэш-пароль" Click="HashPass_Click" Margin="173 5 0 0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="120"/>
             </StackPanel>
+            <!-- heshirovanie -->
             <StackPanel Orientation="Horizontal">
-                <Button Name="rc2Pass" Content="rc2" Click="rc2Pass_Click" Margin="173 5 0 0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="120"/>
+                <Button Name="rc2Pass" Content="rc2" Click="RC2Pass_Click" Margin="173 5 0 0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="120"/>
             </StackPanel>
+            <!-- shifr rc2-->
             <StackPanel Orientation="Horizontal">
                 <TextBox Name="Passwd" VerticalAlignment="Center" HorizontalAlignment="Left" Width="120" Margin="50 0 0 0" />
             </StackPanel>
+            <!-- tekstovoe pole gde otobrazhaetsa parol a takzhe hesh i rc2 shifry-->
             <StackPanel Orientation="Horizontal">
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="ФИО:" Margin="0 10 0 0"/>
                 <TextBox Name="TBx_FIO" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20 10 0 0" Width="120"/>
             </StackPanel>
+            <!-- tut pisat fio-->
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Роль" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                 <ComboBox x:Name="CmbRole" 
                         DisplayMemberPath="Title"
                           VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Margin="25 5 0 0"/>
             </StackPanel>
+            <!-- roli - admin i user-->
             <Button Name="BtnLogin" Click="BtnLogin_Click" Content="Добавить пользователя" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="35 20 45 0"/>
+            <!-- eta knopka dobavlyaet usera v bazu dannih-->
         </StackPanel>
     </Grid>
 </Page>

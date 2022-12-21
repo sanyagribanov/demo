@@ -11,12 +11,17 @@
     <Grid>
         <StackPanel x:Name="SPanelSymbols" Orientation="Horizontal" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Margin="0 0 0 80" Opacity="1">
         </StackPanel>
+        <!-- генерация капчи-->
         <Border Height="100" BorderThickness="1" BorderBrush="Black" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 80">
             <Canvas Name="CanvasNoise" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Opacity="0.5"/>
+            <!-- отображение сгенерированной капчи-->
         </Border>
         <TextBox HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 90" Width="150" Name="CaptchatextBox"></TextBox>
+        <!-- ввод капчи-->
         <Button x:Name="BtnUpdateCaptcha1" Click="BtnUpdateCaptcha1_Click" VerticalAlignment="Center" Margin="0 300 0 0" Width="150">Обновить капчу</Button>
+        <!-- обновление капчи-->
 
         <Button Click="Button_Click" Content="Войти" Width="150" Height="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 30"/>
+        <!-- вход в учетную запись-->
     </Grid>
 </Page>

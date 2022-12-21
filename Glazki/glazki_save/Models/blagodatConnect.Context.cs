@@ -13,20 +13,21 @@ namespace glazki_save.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class blagodatEntities8 : DbContext
+    public partial class blagodatEntities9 : DbContext
     {
-        private static blagodatEntities8 _context;
-        public blagodatEntities8()
-            : base("name=blagodatEntities8")
-        {
-        }
+        private static blagodatEntities9 _context;
 
-        public static blagodatEntities8 GetContext()
+        public static blagodatEntities9 GetContext()
         {
             if (_context == null)
-                _context = new blagodatEntities8();
+                _context = new blagodatEntities9();
 
             return _context;
+        }
+
+        public blagodatEntities9()
+            : base("name=blagodatEntities9")
+        {
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

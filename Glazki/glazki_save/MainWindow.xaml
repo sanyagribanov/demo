@@ -12,19 +12,23 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Image Name="AppImage"  HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Source="res/logo.png"/>
+        <!-- логотип-->
         <StackPanel  HorizontalAlignment="Right" VerticalAlignment="Top">
             <Button Content="Администратор" Margin="0"  Width="120" Height="30" FontSize="12" Foreground="White" Click="Admin_Click"/>
             <Button Content="Пользователь"  Margin="0"  Width="120" Height="30"  FontSize="12" Foreground="White" Click="Manager_Click"/>
             
             <Button Content="Работа с данными" Width="120" Height="30" Margin="0" FontSize="12" Foreground="White" Name="BackBtn" Click="BackBtn_Click"/>
         </StackPanel>
+        <!-- кнопки для работы-->
 
         <Label Content="ГК Благодать" HorizontalAlignment="Center" Margin="215,32,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="25" FontStyle="Oblique" RenderTransformOrigin="0.059,0.151" Height="35" Width="319"/>
+        <!-- название конторы-->
         <Frame Grid.Row="1" Name="MainFrame" Navigated="MainFrame_Navigated" NavigationUIVisibility="Hidden"/>
-
+        <!-- это для того, чтобы не отображалась уродливая дефолтная переключалка-->
         <Grid>
             <DataGrid Margin="0,90,0,0" Background="#7ee69b"/>
             <Frame Width="200" Height="80" Margin="0 110 0 0" x:Name="Timer"></Frame>
         </Grid>
+        <!-- фрейм где происходит вся магия-->
     </Grid>
 </Window>

@@ -19,12 +19,14 @@
                 <Border Height="32" Width="32" Margin="0,0,16,0" Background="White">
                     <Image Name="UserPhoto" Height="30" Width="30"/>
                 </Border>
-
+                <!-- ава-->
                 <TextBlock Name="UserTB" Text="Иванов И И" VerticalAlignment="Center" Margin="0,0,16,0" Foreground="White"/>
+                <!-- никнейм-->
                 <TextBlock Name="RoleTB" Text="(Старший смены)" VerticalAlignment="Center" Foreground="White"/>
+                <!-- должность-->
             </StackPanel>
             <TextBlock Grid.Column="1" Name="TimeTB" Text="00:00:00" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" Margin="0,0,16,0"/>
-
+            <!-- туймер-->
             <Frame x:Name="MainFrame"></Frame>
         </Grid>
     </Grid>

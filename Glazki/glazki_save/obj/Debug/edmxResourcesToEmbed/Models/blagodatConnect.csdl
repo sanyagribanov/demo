@@ -98,7 +98,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="blagodatEntities8" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="blagodatEntities9" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="clients" EntityType="Self.clients" />
     <EntitySet Name="user" EntityType="Self.user" />
     <EntitySet Name="zakazy" EntityType="Self.zakazy" />

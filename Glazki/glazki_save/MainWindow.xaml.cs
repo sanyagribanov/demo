@@ -24,27 +24,28 @@ namespace glazki_save
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new ProductPage());
+            MainFrame.Navigate(new LoginPage());
 
         }
         private void Admin_Click(Object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new admin());
+            MainFrame.Navigate(new LoginPage());
         }
-
+        //переход на страницу авторизации
         private void Manager_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new manager());
+            MainFrame.Navigate(new LoginPage());
         }
-
+        //и тут тоже
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {
 
         }
-
+        // навигация по проекту
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new Pages.ProductPage());
         }
+        //переход на страницу с таблицей
     }
 }

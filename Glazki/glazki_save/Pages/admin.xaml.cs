@@ -1,19 +1,8 @@
-﻿using glazki_save.Classes;
-using glazki_save.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace glazki_save
@@ -30,12 +19,13 @@ namespace glazki_save
         {
             InitializeComponent();
 
-            Classes.DBConnect.modeldb = new Models.blagodatEntities8();
+            Classes.DBConnect.modeldb = new Models.blagodatEntities9();
 
-            UserTB_2.Text = Models.blagodatEntities8.CurrentUser.FIO;
-            RoleTB_2.Text = "(" + Models.blagodatEntities8.CurrentUser.role.RoleID + ")";
+            //отображение имени пользователя
+            UserTB_2.Text = Models.blagodatEntities9.GetContext().user.ToString();
+            RoleTB_2.Text = "(" + Models.blagodatEntities9.GetContext().role.ToString() + ")";
 
-            var fullFilePath = Models.blagodatEntities8.CurrentUser.img1;
+            var fullFilePath = Models.blagodatEntities9.CurrentUser.img1;
 
             BitmapImage bitmap = new BitmapImage();
             bitmap.BeginInit();
@@ -49,6 +39,7 @@ namespace glazki_save
             timerAdmin.Start();
         }
 
+        //таймер
         private void timerTick(object sender, EventArgs e)
         {
             dateAdmin = dateAdmin.AddSeconds(1);
@@ -63,7 +54,7 @@ namespace glazki_save
                 timerAdmin.Stop();
                 App.IsGone = true;
                 NavigationService.Navigate(new LoginPage());
-       
+
                 MessageBox.Show("Сеанс подошел к концу!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }

@@ -19,13 +19,17 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Название"></TextBlock>
-        <TextBlock Text="Номер товара" Grid.Row="1"></TextBlock>
-        <TextBlock Text="Агент" Grid.Row="2"></TextBlock>
-        <TextBox MaxLength="100" Grid.Column="1" Grid.Row="0" Margin="0,0,0,66"/>
-        <TextBox Grid.Column="1" Width="175" HorizontalAlignment="Left" Margin="0,112,0,56" Grid.RowSpan="2"/>
-        <ComboBox Grid.Row="2" x:Name="ComboProducts" Grid.Column="1" DisplayMemberPath="agent" Margin="0,0,0,66"/>
-
+        <TextBlock Text="Наименование"></TextBlock>
+        <TextBlock Text="Стоимость" Grid.Row="1"></TextBlock>
+        <TextBlock Text="Код заказа" Grid.Row="2"></TextBlock>
+        <!-- тут ничего интересного просто текстблоки, указывающие, где что писать-->
+        <TextBox Text="{Binding title}" MaxLength="100" Grid.Column="1" Grid.Row="0" Margin="0,0,0,66"/>
+        <!-- сюда писать наименование услуги, разумеется все берется из соответсвующего поля таблицы, это работает для всех нижеприведенных блоков (не хочу писать одно и тоже 100500 раз)-->
+        <TextBox Text="{Binding price}" Grid.Column="1" Width="175" HorizontalAlignment="Left" Margin="0,112,0,56" Grid.RowSpan="2"/>
+        <!-- тут писать цену-->
+        <ComboBox SelectedItem="{Binding ID}" Grid.Row="2" x:Name="ComboProducts" Grid.Column="1" DisplayMemberPath="agent" Margin="0,0,0,66"/>
+        <!-- комбобокс с отображением кодов товара (проще сказать артикулов)-->
         <Button Name="BtnSave" Content="Сохранить" Grid.Row="3" Grid.Column="1" Margin="94,28,53,28" Click="BtnSave_Click"/>
+        <!-- запись в бд-->
     </Grid>
 </Page>

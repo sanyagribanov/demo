@@ -21,14 +21,19 @@ namespace glazki_save.Pages
     /// </summary>
     public partial class captcha : Page
     {
+
+        //тута праисходет абнавленя капчя
         public captcha()
         {
             InitializeComponent();
             UpdateCaptcha();
         }
+
+        //бирецца нобор случяйних зноченей
         Random _random = new Random();
         public string Symbols;
 
+        //генирацыя капче
         private void UpdateCaptcha()
         {
             SPanelSymbols.Children.Clear();
@@ -37,6 +42,7 @@ namespace glazki_save.Pages
             GenerateNoise(30);
         }
 
+        //генирацея симвалаф
         private void GenerateSymbols(int count)
         {
             string alphabet = "WERPASFHKXVBM234578";
@@ -54,6 +60,7 @@ namespace glazki_save.Pages
             }
         }
 
+        //генирацыйыя шуумааа
         private void GenerateNoise(int volumeNoise)
         {
             for (int i = 0; i < volumeNoise; i++)
@@ -85,6 +92,7 @@ namespace glazki_save.Pages
             }
         }
 
+        //кнопко абновлинея капче
         private void BtnUpdateCaptcha1_Click(object sender, RoutedEventArgs e)
         {
             UpdateCaptcha();
@@ -98,7 +106,7 @@ namespace glazki_save.Pages
                 //обращение к таблице Юзер для получения Логин и Пассворд
                 //var - общий тп переменной
                 //userObj - имя объекта. задается самостоятельно. Информация об агенте - agentObj 
-                Models.blagodatEntities8 database = new blagodatEntities8();
+                Models.blagodatEntities9 database = new blagodatEntities9();
 
                 var userObj = database.user.FirstOrDefault();
 
@@ -130,3 +138,22 @@ namespace glazki_save.Pages
     }
 }
 
+//⠄⠄⠄⠄⠄⠄⢀⣤⣴⣶⡶⠖⠂⠉⠓⠶⣦⣄⠄⠄⠄⠄⠄⠄
+/*⠄⠄⠄⠄⢀⣼⣿⣿⡿⠋⠈⠄⠄⠄⠄⠄⠈⠛⠷⣦⡀⠄⠄⠄
+⠄⠄⠄⣴⣿⣿⠟⠉⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⢻⣆⠄⠄
+⠄⠄⢸⣿⣿⠇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠻⡄⠄
+⠄⠄⣾⣿⡏⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠻⠄
+⠄⠄⣿⣿⣇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⠄
+⢠⣶⣿⣿⡏⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣀⣀⠄⠄⢸⡇
+⠈⠟⣻⣿⡇⠄⠄⠠⣤⣴⣿⣿⣿⣷⡆⠄⣰⣿⣟⣛⣿⠆⢸⠃
+⠄⠄⠘⣫⢳⡀⠄⠄⠄⠉⠈⠋⠉⠉⠑⠄⠉⠁⠉⠁⠁⠄⠘⠄
+⠄⠄⠄⠪⣼⣷⣄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡆⠄
+⠄⠄⠄⠐⢻⣿⢿⠂⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⠁⠄
+⠄⠄⠄⠄⠄⣿⡏⢣⠄⠄⠄⠄⠄⠑⢶⣤⣤⠂⠄⠄⠄⡼⠄⠄
+⠄⠄⠄⠄⠄⢸⣷⣄⠄⠄⠄⢀⣄⣀⣀⠉⢀⣀⡄⠄⢠⠇⠄⠄
+⠄⠄⠄⢀⣴⠈⣿⣿⣦⡀⠄⠈⠱⣧⣭⣭⣭⠟⠁⢀⣼⣧⡀⠄
+⣶⣶⣶⣿⡟⠄⠙⢿⣿⣿⣦⣄⡀⠄⠄⠄⠄⢀⠴⠋⣼⣿⣿⣷
+⣿⣿⣿⣿⠇⠄⠄⠄⠙⢿⣿⣿⣿⣿⡿⠟⠋⠁⠄⠄⣿⣿⣿⣿
+⣿⣿⣿⡟⠄⠄⠄⠄⣀⣴⣿⣯⣉⠉⠄⠄⠄⠄⠄⣸⣿⣿⣿⣿
+⣿⣿⣿⠇⠄⠄⣠⠾⢿⣿⣿⣿⣿⣷⡄⡀⠄⠄⠄⣿⣿⣿⣿⣿
+⣿⣿⣿⠄⠄⠈⠄⠄⠄⣿⣿⣿⠋⠄⠄⠄⠄⠄⢸⣿⣿⣿⣿⣿*/

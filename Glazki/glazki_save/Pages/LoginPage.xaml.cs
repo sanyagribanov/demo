@@ -15,9 +15,10 @@ namespace glazki_save
         {
             InitializeComponent();
         }
+        //обращение к бд
+        public static blagodatEntities9 Context = new blagodatEntities9();
 
-        public static blagodatEntities8 Context = new blagodatEntities8();
-
+        //иницилизация юзера
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
             var currentUser = Context.user.FirstOrDefault(p => p.Name == TBoxLogin.Text && p.Password == PBoxPassword.Password);
@@ -33,6 +34,7 @@ namespace glazki_save
             }
         }
 
+        //кнопка регистрации нового юзера
         private void AddUser_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate (new Pages.AddUser());

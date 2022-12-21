@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="39314b139b814032b60b33fa51dade17" Name="Diagram1">
+      <Diagram DiagramId="103149470651410699b90348468103bd" Name="Diagram1">
         <EntityTypeShape EntityType="blagodatModel.clients" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="blagodatModel.user" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="blagodatModel.zakazy" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />

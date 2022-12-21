@@ -4,30 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
 C:\WORKSPACE\demo\Glazki\glazki_save\obj\Debug\
-=======
-C:\Users\alexander\Desktop\хлам\demo\Glazki\glazki_save\obj\Debug\
->>>>>>> 9488e16bffa6539e0f4de69f14e0cf936a72ddcd
 glazki_save
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
 C:\WORKSPACE\demo\Glazki\glazki_save\App.xaml
 81641299136
 2-1602681689
-231100532823
+22372965698
 18-1514118611
 Pages\AddUser.xaml;Pages\admin.xaml;Pages\captcha.xaml;Pages\EditPage.xaml;Pages\LoginPage.xaml;MainWindow.xaml;Pages\manager.xaml;Pages\ProductPage.xaml;
-=======
-C:\Users\alexander\Desktop\хлам\demo\Glazki\glazki_save\App.xaml
-5-1048158817
-2742436925
-181143776335
-18-1977098687
-admin.xaml;auth.xaml;MainWindow.xaml;manager.xaml;smena.xaml;
->>>>>>> 9488e16bffa6539e0f4de69f14e0cf936a72ddcd
 
-False
+True
 

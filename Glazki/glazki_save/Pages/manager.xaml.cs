@@ -24,16 +24,18 @@ namespace glazki_save
     {
         DispatcherTimer timerManager = new DispatcherTimer();
         DateTime dateManager = new DateTime(0, 0);
+
+        //имя юзера типа и его должность
         public manager()
         {
             InitializeComponent();
+                
+            Classes.DBConnect.modeldb = new blagodatEntities9();
 
-            Classes.DBConnect.modeldb = new Models.blagodatEntities8();
+            UserTB.Text = Models.blagodatEntities9.GetContext().user.ToString();
+            RoleTB.Text = "(" + Models.blagodatEntities9.CurrentUser.role.RoleID + ")";
 
-            UserTB.Text = Models.blagodatEntities8.CurrentUser.FIO;
-            RoleTB.Text = "(" + Models.blagodatEntities8.CurrentUser.role.RoleID + ")";
-
-            var fullFilePath = Models.blagodatEntities8.CurrentUser.img1;
+            var fullFilePath = Models.blagodatEntities9.CurrentUser.img1;
 
             BitmapImage bitmap = new BitmapImage();
             bitmap.BeginInit();
@@ -47,6 +49,7 @@ namespace glazki_save
             timerManager.Start();
         }
 
+        //а тута таймер
         private void timerTick(object sender, EventArgs e)
         {
             dateManager = dateManager.AddSeconds(1);

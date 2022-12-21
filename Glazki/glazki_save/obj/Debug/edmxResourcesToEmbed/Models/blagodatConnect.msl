@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище blagodatModelContainer" CdmEntityContainer="blagodatEntities8">
+  <EntityContainerMapping StorageEntityContainer="Хранилище blagodatModelContainer" CdmEntityContainer="blagodatEntities9">
     <EntitySetMapping Name="clients">
       <EntityTypeMapping TypeName="blagodatModel.clients">
         <MappingFragment StoreEntitySet="clients">

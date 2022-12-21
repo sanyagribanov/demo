@@ -18,13 +18,16 @@
             <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="16,0,0,0">
                 <Border Height="32" Width="32" Margin="0,0,16,0" Background="White">
                     <Image Name="UserPhoto_2" Height="30" Width="30"/>
+                    <!-- аватарка-->
                 </Border>
 
                 <TextBlock Name="UserTB_2" Text="Иванов И И" VerticalAlignment="Center" Margin="0,0,16,0" Foreground="White"/>
+                <!--имя пользователя -->
                 <TextBlock Name="RoleTB_2" Text="(Администратор)" VerticalAlignment="Center" Foreground="White"/>
+                <!-- роль пользователя-->
             </StackPanel>
             <TextBlock Grid.Column="1" Name="TimeTB_2" Text="00:00:00" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" Margin="0,0,16,0"/>
-
+            <!-- таймер-->
             <Frame x:Name="MainFrame"></Frame>
         </Grid>
     </Grid>
