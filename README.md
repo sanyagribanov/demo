@@ -10,7 +10,8 @@ user		2<br>
 # Images
 Комментарии в коде
 ![image](https://user-images.githubusercontent.com/86486142/208490197-6abb1e86-5e9c-42ad-991d-484869276b7b.png)
-![image](https://user-images.githubusercontent.com/86486142/208490295-c0c73b4b-fd9c-4547-8718-c27ae0874576.png)
+![image](https://user-images.githubusercontent.com/86486142/208886507-7e5f6b62-788b-4608-bbef-1c63c3747aae.png)
+
 ---
 ![изображение](https://user-images.githubusercontent.com/86486142/203646034-c91b47e7-4b63-4c05-9104-70d759639bc0.png)
 ![изображение](https://user-images.githubusercontent.com/86486142/203646051-b3ffaba8-7e7f-4810-baf6-67001181b898.png)
