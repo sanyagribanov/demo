@@ -22,53 +22,52 @@ namespace turagentstvo.pages
     /// </summary>
     public partial class AddHotel : Page
     {
-        public Hotels _currentHotels = new Hotels();
-        public static TourAgencyMDEntities2 TourData = new TourAgencyMDEntities2();
-
-        public AddHotel()
+        private Hotels _currentHotels = new Hotels();
+        public AddHotel(Hotels selectedhotel)
         {
             InitializeComponent();
             
+            if (selectedhotel != null)
+            {
+                _currentHotels = selectedhotel;
+            }
             DataContext = _currentHotels;
 
-            var allCountries = TourAgencyMDEntities2.GetContext().Countrys.ToList();
-            allCountries.Insert(0, new Countrys
-            {
-                CountryName = "Страна"
-            }); ;
-            ComboProducts.ItemsSource = allCountries;
-
-            ComboData.ItemsSource= TourAgencyMDEntities2.GetContext().Dates.ToList();
+            ComboProducts.ItemsSource = TourAgencyMDEntities2.GetContext().Countrys.ToList();
         }
-
-        
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
 
-            if (string.IsNullOrWhiteSpace(_currentHotels.HotelName))
+            StringBuilder errors = new StringBuilder();
+
+            if (string.IsNullOrWhiteSpace(HotelString.Text))
             {
-                MessageBox.Show("Введите название отеля");
+                errors.AppendLine("Введите название отеля");
+            }
+            if ( _currentHotels.Stars > 5)
+            {
+                errors.AppendLine("Слишком много звезд");
+            }
+            if (_currentHotels.HotelName == null)
+            {
+                errors.AppendLine("Выберите страну");
             }
 
-            if (_currentHotels.Stars < 1 || _currentHotels.Stars > 5)
+            if (errors.Length > 0)
             {
-                MessageBox.Show("Слишком много звезд");
+                MessageBox.Show(errors.ToString());
+                return;
             }
 
-            Hotels AddHotels = new Hotels
+            if (_currentHotels.HotelID == 0)
             {
-                HotelName = _currentHotels.HotelName,
-                Stars = _currentHotels.Stars,
-            };
-
-            var currentCountry = ComboProducts.SelectedItem as Countrys;
-            AddHotels.CountryName = currentCountry.CountryName;
+                TourAgencyMDEntities2.GetContext().Hotels.Add(_currentHotels);
+            }
 
             try
             {
-                TourData.Hotels.Add(AddHotels);
-                TourData.SaveChanges();
+                TourAgencyMDEntities2.GetContext().SaveChanges();
                 MessageBox.Show("Отель добавлен!");
                 NavigationService.GoBack();
             }
@@ -76,8 +75,6 @@ namespace turagentstvo.pages
             {
                 MessageBox.Show($"{ex.Message}");
             }
-            
-
         }
 
         private void ComboData_SelectionChanged(object sender, SelectionChangedEventArgs e)

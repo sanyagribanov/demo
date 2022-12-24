@@ -50,7 +50,15 @@ namespace turagentstvo
 
         private void ExitButton2_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.GoBack();
+            try
+            {
+                MainFrame.GoBack();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Вы достигли предела!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+           
         }
     }
 }

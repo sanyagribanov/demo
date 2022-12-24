@@ -33,7 +33,7 @@ namespace turagentstvo.pages
         /// <param name="e"></param>
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AddHotel());
+            NavigationService.Navigate(new AddHotel(null));
 
         }
         // удаление данных их таблицы
@@ -97,7 +97,7 @@ namespace turagentstvo.pages
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AddHotel());
+            NavigationService.Navigate(new AddHotel(null));
         }
     }
 }
