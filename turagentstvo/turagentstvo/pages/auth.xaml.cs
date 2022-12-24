@@ -50,20 +50,10 @@ namespace turagentstvo.resursi
             {
                 string symbol = alphabet.ElementAt(_random.Next(0, alphabet.Length)).ToString();
                 TextBlock lbl = new TextBlock();
-
-
-
                 lbl.Text = symbol;
                 lbl.FontSize = _random.Next(20, 40);
                 lbl.RenderTransform = new RotateTransform(_random.Next(-45, 45));
                 lbl.Margin = new Thickness(20, 20, 20, 20);
-
-
-
-                //lbl.Foreground = ra
-
-
-
                 SPanelSymbols.Children.Add(lbl);
 
                 Symbols += symbol;
@@ -107,12 +97,7 @@ namespace turagentstvo.resursi
 
                 var userObj = classes.DataBaseConnect.modeldb.User.FirstOrDefault(x =>
                 x.login == LoginUs.Text && x.Password == Password.Password);
-
-                /*if(LoginUs.Text=="test" && Password.Password=="test")
-                {
-                 //Manager.MainFrame.Navigate(new Administrator());
-                }*/
-
+                
                 if (userObj != null && (GetCapcha.Text == Symbols))
                 {
                     models.TourAgencyMDEntities2.currentuser = userObj;
