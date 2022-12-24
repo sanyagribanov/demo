@@ -74,6 +74,7 @@
     <Property Name="login" Type="nvarchar" MaxLength="50" />
     <Property Name="RoleID" Type="int" />
     <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="avatar" Type="varchar(max)" />
   </EntityType>
   <Association Name="FK_Role_User">
     <End Role="User" Type="Self.User" Multiplicity="1" />

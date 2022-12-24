@@ -13,5 +13,6 @@ namespace turagentstvo
     /// </summary>
     public partial class App : Application
     {
+        internal static bool IsGone;
     }
 }

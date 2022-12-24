@@ -20,5 +20,7 @@ namespace turagentstvo.models
         public string Password { get; set; }
     
         public virtual Role Role { get; set; }
+
+        public string avatar { get; set; }
     }
 }

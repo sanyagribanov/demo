@@ -55,6 +55,7 @@
     <EntitySetMapping Name="User">
       <EntityTypeMapping TypeName="TourAgencyMDModel.User">
         <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="login" ColumnName="login" />
           <ScalarProperty Name="RoleID" ColumnName="RoleID" />

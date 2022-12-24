@@ -17,7 +17,7 @@
 
             <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="16,0,0,0">
                 <Border Height="132" Width="152" Margin="0,0,16,0" Background="White">
-                    <Image Name="admin" Height="150" Width="150" Source="C:\WORKSPACE\demo\turagentstvo\turagentstvo\resursi\user1.jpg"/>
+                    <Image Name="userPhoto" Height="150" Width="150" Source="C:\WORKSPACE\demo\turagentstvo\turagentstvo\resursi\user1.jpg"/>
                     <!-- аватарка-->
                 </Border>
 
