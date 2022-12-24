@@ -26,6 +26,9 @@ user		2<br>
 ![изображение](https://user-images.githubusercontent.com/86486142/206911493-c1220d58-a0ae-4a83-9039-beb0094537d3.png)
 # Вывод DataGrid
 ![изображение](https://user-images.githubusercontent.com/86486142/206923035-880afdea-d926-4c3a-841a-6d19d8c4d6f1.png)
+# Удаление данных
+![image](https://user-images.githubusercontent.com/86486142/209447759-d5459493-e052-46df-b1f8-6b2869576efd.png)
+
 
 # Видео
 [хэширование](https://disk.yandex.ru/i/YD5xOP78-HjhIw) <br>
