@@ -28,6 +28,13 @@ user		2<br>
 ![изображение](https://user-images.githubusercontent.com/86486142/206923035-880afdea-d926-4c3a-841a-6d19d8c4d6f1.png)
 # Удаление данных
 ![image](https://user-images.githubusercontent.com/86486142/209447759-d5459493-e052-46df-b1f8-6b2869576efd.png)
+# listview
+![image](https://user-images.githubusercontent.com/86486142/209448085-a300aa40-fdde-4394-a970-b52d7bcf535f.png)
+# Поиск и тд
+![image](https://user-images.githubusercontent.com/86486142/209448100-4c66b736-f5be-4a4d-b091-f440aea05312.png)
+![image](https://user-images.githubusercontent.com/86486142/209448110-8a69d6b2-9df4-4555-ba59-585c11297faa.png)
+![image](https://user-images.githubusercontent.com/86486142/209448127-bc0ea6aa-90e4-41eb-9869-ccb4b419dd18.png)
+
 
 
 # Видео
