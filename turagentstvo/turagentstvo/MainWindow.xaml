@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:turagentstvo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Туры" Height="450" Width="800" Icon="resursi/icon.ico">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush  ImageSource="resursi/fon.jpg" Stretch="Fill"/>
+            </Grid.Background>
+            <Image Name="AppImage"  HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Source="resursi/logo.png"/>
+            <TextBlock Text="Алкотуры от дяди Сани" FontSize="25" FontFamily="Arial" FontWeight="DemiBold" FontStyle="Italic" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+            <StackPanel>
+                <Button x:Name="adminButton" Content="Admin" Click="AdminButton_Click" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Background="LightYellow" Foreground="YellowGreen" FontSize="14"/>
+                <Button x:Name="userButton" Content="User" Click="UserButton_Click" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center" Background="LightYellow" Foreground="YellowGreen" FontSize="14"/>
+                <Button x:Name="exitButton" Content="Work" Click="ExitButton_Click" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="LightYellow" Foreground="YellowGreen" FontSize="14"/>
+                <Button x:Name="exitButton2" Content="Back" Click="ExitButton2_Click" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="LightYellow" Foreground="YellowGreen" FontSize="14"/>
+            </StackPanel>
+        </Grid>
+        <Frame x:Name="MainFrame" Navigated="MainFrame_Navigated" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        <Grid>
+            <DataGrid Margin="0,90,0,0"/>
+        </Grid>
     </Grid>
 </Window>

@@ -1,0 +1,34 @@
+﻿<Page x:Class="turagentstvo.pages.user"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:turagentstvo.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="user">
+
+    <Grid>
+        <Grid Grid.Row="1" Background="#49b4e6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="16,0,0,0">
+                <Border Height="132" Width="152" Margin="0,0,16,0" Background="White">
+                    <Image Name="admin" Height="150" Width="150" Source="C:\WORKSPACE\demo\turagentstvo\turagentstvo\resursi\user1.jpg"/>
+                    <!-- аватарка-->
+                </Border>
+
+                <TextBlock Name="UserTB_2" Text="Иванов И И" VerticalAlignment="Center" Margin="0,0,16,0" Foreground="Black"/>
+                <!--имя пользователя -->
+                <TextBlock Name="RoleTB_2" Text="(Юзер)" VerticalAlignment="Center" Foreground="Black"/>
+                <!-- роль пользователя-->
+            </StackPanel>
+            <TextBlock Grid.Column="1" Name="TimeTB_2" Text="00:00:00" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="Black" Margin="0,0,16,0"/>
+            <!-- таймер-->
+            <Frame x:Name="MainFrame"></Frame>
+        </Grid>
+    </Grid>
+</Page>

@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +64,55 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="classes\Manager.cs" />
+    <Compile Include="models\Countrys.cs">
+      <DependentUpon>ModelConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\Dates.cs">
+      <DependentUpon>ModelConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\Hotels.cs">
+      <DependentUpon>ModelConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\ModelConnect.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelConnect.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\ModelConnect.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\ModelConnect.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelConnect.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="models\Role.cs">
+      <DependentUpon>ModelConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\TourHotels.cs">
+      <DependentUpon>ModelConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\Tours.cs">
+      <DependentUpon>ModelConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\TourTypes.cs">
+      <DependentUpon>ModelConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\User.cs">
+      <DependentUpon>ModelConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pages\AddHotel.xaml.cs">
+      <DependentUpon>AddHotel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin.xaml.cs">
+      <DependentUpon>admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\auth.xaml.cs">
+      <DependentUpon>auth.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,12 +121,53 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="classes\DataBaseConnect.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="pages\AddHotel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\HotelsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\listview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\registr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\user.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\auth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pages\HotelsPage.xaml.cs">
+      <DependentUpon>HotelsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\listview.xaml.cs">
+      <DependentUpon>listview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\registr.xaml.cs">
+      <DependentUpon>registr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\user.xaml.cs">
+      <DependentUpon>user.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -86,6 +185,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="models\ModelConnect.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelConnect.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="models\ModelConnect.edmx.diagram">
+      <DependentUpon>ModelConnect.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +200,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resursi\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resursi\fon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resursi\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resursi\admin1.jpg" />
+    <Resource Include="resursi\user1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="models\ModelConnect.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelConnect.edmx</DependentUpon>
+      <LastGenOutput>ModelConnect.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="models\ModelConnect.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelConnect.edmx</DependentUpon>
+      <LastGenOutput>ModelConnect.cs</LastGenOutput>
+    </Content>
+    <Resource Include="resursi\tours\deli.jpg" />
+    <Resource Include="resursi\tours\fin.jpg" />
+    <Resource Include="resursi\tours\minsk.jpg" />
+    <Resource Include="resursi\tours\tallin.jpg" />
+    <Resource Include="resursi\tours\bolgaria.jpg" />
+    <Resource Include="resursi\tours\gorod1.jpg" />
+    <Resource Include="resursi\tours\vostok.jpg" />
+    <Resource Include="resursi\zaglushka.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

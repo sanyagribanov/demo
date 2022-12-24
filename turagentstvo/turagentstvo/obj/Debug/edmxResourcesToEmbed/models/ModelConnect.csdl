@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TourAgencyMDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Countrys">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Hotels">
+    <Key>
+      <PropertyRef Name="HotelID" />
+    </Key>
+    <Property Name="HotelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HotelName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stars" Type="Int32" Nullable="false" />
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Role_User" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="TourHotels">
+    <Key>
+      <PropertyRef Name="HotelID" />
+    </Key>
+    <Property Name="HotelID" Type="Int32" Nullable="false" />
+    <Property Name="TourID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tours">
+    <Key>
+      <PropertyRef Name="TourID" />
+    </Key>
+    <Property Name="TourID" Type="Int32" Nullable="false" />
+    <Property Name="ImageTour" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TourName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TicketsCount" Type="Int32" />
+    <Property Name="Cost" Type="Int32" />
+    <Property Name="isActual" Type="Int32" />
+    <Property Name="TourType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Actual" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RoleID" Type="Int32" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_Role_User" FromRole="User" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="TourTypes">
+    <Key>
+      <PropertyRef Name="TourTypeID" />
+      <PropertyRef Name="TypeName" />
+    </Key>
+    <Property Name="TourTypeID" Type="Int32" Nullable="false" />
+    <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Role_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Role">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TourAgencyMDEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Countrys" EntityType="Self.Countrys" />
+    <EntitySet Name="Hotels" EntityType="Self.Hotels" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="TourHotels" EntityType="Self.TourHotels" />
+    <EntitySet Name="Tours" EntityType="Self.Tours" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <EntitySet Name="TourTypes" EntityType="Self.TourTypes" />
+    <AssociationSet Name="FK_Role_User" Association="Self.FK_Role_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Role" EntitySet="Role" />
+    </AssociationSet>
+    <EntitySet Name="Dates" EntityType="TourAgencyMDModel.Dates" />
+  </EntityContainer>
+  <EntityType Name="Dates">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="dates" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dates" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

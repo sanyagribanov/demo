@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using turagentstvo.pages;
+using turagentstvo.resursi;
 
 namespace turagentstvo
 {
@@ -23,6 +25,32 @@ namespace turagentstvo
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new listview());
+        }
+
+        private void AdminButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new auth());
+        }
+
+        private void UserButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new auth());
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new HotelsPage());
+        }
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void ExitButton2_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.GoBack();
         }
     }
 }

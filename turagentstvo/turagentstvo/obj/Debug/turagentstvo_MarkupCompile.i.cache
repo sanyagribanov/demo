@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\agribanov\Desktop\demo\turagentstvo\turagentstvo\obj\Debug\
+C:\WORKSPACE\demo\turagentstvo\turagentstvo\obj\Debug\
 turagentstvo
 none
 false
 DEBUG;TRACE
-C:\Users\agribanov\Desktop\demo\turagentstvo\turagentstvo\App.xaml
-1219584333
-
-6-502434485
-13-1310406943
-MainWindow.xaml;
+C:\WORKSPACE\demo\turagentstvo\turagentstvo\App.xaml
+8-795412181
+2-1510586655
+26-1583552469
+181814213729
+MainWindow.xaml;pages\AddHotel.xaml;pages\admin.xaml;pages\HotelsPage.xaml;pages\listview.xaml;pages\registr.xaml;pages\user.xaml;pages\auth.xaml;
 
 True
 
