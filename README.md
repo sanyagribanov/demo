@@ -7,6 +7,7 @@ user		2<br>
 [Хэширование](#Хэширование)<br>
 [Datagrid](https://github.com/sanyagribanov/demo/blob/main/README.md#%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4-datagrid) <br>
 [Видео](#Видео)
+[Все добро по практике](https://disk.yandex.ru/d/gFatO9onN4SeJw)
 # Images
 # Комментарии в коде
 ![image](https://user-images.githubusercontent.com/86486142/208490197-6abb1e86-5e9c-42ad-991d-484869276b7b.png)
