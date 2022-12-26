@@ -16,5 +16,6 @@ namespace turagentstvo.models
     {
         public int TourTypeID { get; set; }
         public string TypeName { get; set; }
+
     }
 }
